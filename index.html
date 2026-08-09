@@ -54,13 +54,13 @@
     <div class="header-actions">
       <div class="lang-switch">
         <button type="button" class="lang-switch__btn" aria-haspopup="true" aria-expanded="false" data-i18n-aria-label="common.chooseLanguage">
-          <span aria-hidden="true">🌐</span> <span data-lang-current-label>HR</span> <span class="lang-switch__chevron">▾</span>
+          <span data-lang-current-label>HR</span> <span class="lang-switch__chevron">▾</span>
         </button>
         <div class="lang-switch__menu" role="menu">
-          <button type="button" class="lang-switch__option" data-lang="hr" role="menuitem"><span class="lang-switch__flag">🇭🇷</span> Hrvatski</button>
-          <button type="button" class="lang-switch__option" data-lang="en" role="menuitem"><span class="lang-switch__flag">🇬🇧</span> English</button>
-          <button type="button" class="lang-switch__option" data-lang="de" role="menuitem"><span class="lang-switch__flag">🇩🇪</span> Deutsch</button>
-          <button type="button" class="lang-switch__option" data-lang="fr" role="menuitem"><span class="lang-switch__flag">🇫🇷</span> Français</button>
+          <button type="button" class="lang-switch__option" data-lang="hr" role="menuitem">Hrvatski</button>
+          <button type="button" class="lang-switch__option" data-lang="en" role="menuitem">English</button>
+          <button type="button" class="lang-switch__option" data-lang="de" role="menuitem">Deutsch</button>
+          <button type="button" class="lang-switch__option" data-lang="fr" role="menuitem">Français</button>
         </div>
       </div>
       <a href="booking.html" class="btn btn-primary btn-sm" data-i18n="common.bookNow">Réserver</a>
@@ -171,10 +171,73 @@
         <h2 data-i18n="home.whySection.title">Un accueil à taille humaine</h2>
       </div>
       <div class="value-grid" id="whyGrid">
-        <div class="value-card"><span class="value-card__icon">🗝️</span><h3 data-i18n="home.whySection.items.0.title">…</h3><p data-i18n="home.whySection.items.0.text">…</p></div>
-        <div class="value-card"><span class="value-card__icon">🌊</span><h3 data-i18n="home.whySection.items.1.title">…</h3><p data-i18n="home.whySection.items.1.text">…</p></div>
-        <div class="value-card"><span class="value-card__icon">🏊</span><h3 data-i18n="home.whySection.items.2.title">…</h3><p data-i18n="home.whySection.items.2.text">…</p></div>
-        <div class="value-card"><span class="value-card__icon">💬</span><h3 data-i18n="home.whySection.items.3.title">…</h3><p data-i18n="home.whySection.items.3.text">…</p></div>
+        <div class="value-card"><span class="value-card__icon value-card__icon--plain">–</span><h3 data-i18n="home.whySection.items.0.title">…</h3><p data-i18n="home.whySection.items.0.text">…</p></div>
+        <div class="value-card"><span class="value-card__icon value-card__icon--plain">–</span><h3 data-i18n="home.whySection.items.1.title">…</h3><p data-i18n="home.whySection.items.1.text">…</p></div>
+        <div class="value-card"><span class="value-card__icon value-card__icon--plain">–</span><h3 data-i18n="home.whySection.items.2.title">…</h3><p data-i18n="home.whySection.items.2.text">…</p></div>
+        <div class="value-card"><span class="value-card__icon value-card__icon--plain">–</span><h3 data-i18n="home.whySection.items.3.title">…</h3><p data-i18n="home.whySection.items.3.text">…</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--center" style="max-width:640px;">
+        <p class="eyebrow" data-i18n="home.testimonialsSection.eyebrow">AVIS CLIENTS</p>
+        <h2 data-i18n="home.testimonialsSection.title">Ce que disent nos hôtes</h2>
+      </div>
+      <div class="testimonial-carousel">
+        <div class="testimonial-carousel__viewport">
+          <div class="testimonial-carousel__track" id="testimonialTrack">
+            <article class="review-card review-card--sm">
+              <div class="review-card__stars">★★★★★</div>
+              <p class="review-card__quote" data-i18n="reviewsPage.list.0.quote">…</p>
+              <div class="review-card__author">
+                <div class="review-avatar">S</div>
+                <div><strong data-i18n="reviewsPage.list.0.author">Sophie D.</strong><span data-i18n="reviewsPage.list.0.origin">France</span></div>
+              </div>
+            </article>
+            <article class="review-card review-card--sm">
+              <div class="review-card__stars">★★★★★</div>
+              <p class="review-card__quote" data-i18n="reviewsPage.list.1.quote">…</p>
+              <div class="review-card__author">
+                <div class="review-avatar">T</div>
+                <div><strong data-i18n="reviewsPage.list.1.author">Thomas M.</strong><span data-i18n="reviewsPage.list.1.origin">Allemagne</span></div>
+              </div>
+            </article>
+            <article class="review-card review-card--sm">
+              <div class="review-card__stars">★★★★★</div>
+              <p class="review-card__quote" data-i18n="reviewsPage.list.2.quote">…</p>
+              <div class="review-card__author">
+                <div class="review-avatar">I</div>
+                <div><strong data-i18n="reviewsPage.list.2.author">Ivana K.</strong><span data-i18n="reviewsPage.list.2.origin">Croatie</span></div>
+              </div>
+            </article>
+            <article class="review-card review-card--sm">
+              <div class="review-card__stars">★★★★☆</div>
+              <p class="review-card__quote" data-i18n="reviewsPage.list.3.quote">…</p>
+              <div class="review-card__author">
+                <div class="review-avatar">J</div>
+                <div><strong data-i18n="reviewsPage.list.3.author">James H.</strong><span data-i18n="reviewsPage.list.3.origin">Royaume-Uni</span></div>
+              </div>
+            </article>
+            <article class="review-card review-card--sm">
+              <div class="review-card__stars">★★★★★</div>
+              <p class="review-card__quote" data-i18n="reviewsPage.list.4.quote">…</p>
+              <div class="review-card__author">
+                <div class="review-avatar">L</div>
+                <div><strong data-i18n="reviewsPage.list.4.author">Laura B.</strong><span data-i18n="reviewsPage.list.4.origin">Autriche</span></div>
+              </div>
+            </article>
+            <article class="review-card review-card--sm">
+              <div class="review-card__stars">★★★★★</div>
+              <p class="review-card__quote" data-i18n="reviewsPage.list.5.quote">…</p>
+              <div class="review-card__author">
+                <div class="review-avatar">N</div>
+                <div><strong data-i18n="reviewsPage.list.5.author">Noah V.</strong><span data-i18n="reviewsPage.list.5.origin">Pays-Bas</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -282,5 +345,6 @@
 <script src="assets/js/rooms-data.js?v=2"></script>
 <script src="assets/js/main.js?v=2"></script>
 <script src="assets/js/rooms-ui.js?v=2"></script>
+<script src="assets/js/testimonials.js?v=2"></script>
 </body>
 </html>

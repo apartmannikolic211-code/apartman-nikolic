@@ -9,10 +9,10 @@ const DEFAULT_LANG = "hr";
 const LANG_STORAGE_KEY = "apk_lang";
 
 const LANG_META = {
-  hr: { label: "Hrvatski", flag: "🇭🇷" },
-  en: { label: "English", flag: "🇬🇧" },
-  de: { label: "Deutsch", flag: "🇩🇪" },
-  fr: { label: "Français", flag: "🇫🇷" }
+  hr: { label: "Hrvatski" },
+  en: { label: "English" },
+  de: { label: "Deutsch" },
+  fr: { label: "Français" }
 };
 
 const I18N = {
@@ -53,12 +53,13 @@ const I18N = {
       whySection: {
         eyebrow: "POURQUOI NOUS CHOISIR", title: "Un accueil à taille humaine",
         items: [
-          { icon: "🗝️", title: "Réservation simple", text: "Sélectionnez vos dates, obtenez le prix instantanément et envoyez votre demande en un clic." },
-          { icon: "🌊", title: "À deux pas de la mer", text: "La maison se trouve à quelques minutes à pied du littoral et du centre historique." },
-          { icon: "🏊", title: "Piscine privée", text: "Chaque appartement donne accès à la piscine privée et à l'espace barbecue de la résidence." },
-          { icon: "💬", title: "Réponse rapide", text: "Une question ? Contactez-nous directement par WhatsApp, nous répondons sous 24h." }
+          { title: "Réservation simple", text: "Sélectionnez vos dates, obtenez le prix instantanément et envoyez votre demande en un clic." },
+          { title: "À deux pas de la mer", text: "La maison se trouve à quelques minutes à pied du littoral et du centre historique." },
+          { title: "Piscine privée", text: "Chaque appartement donne accès à la piscine privée et à l'espace barbecue de la résidence." },
+          { title: "Réponse rapide", text: "Une question ? Contactez-nous directement par WhatsApp, nous répondons sous 24h." }
         ]
       },
+      testimonialsSection: { eyebrow: "AVIS CLIENTS", title: "Ce que disent nos hôtes" },
       ctaBanner: { title: "Prêt à réserver votre séjour ?", text: "Choisissez votre chambre, vos dates, et recevez votre récapitulatif en un instant.", button: "Commencer ma réservation" },
       locationSection: { eyebrow: "OÙ NOUS TROUVER", title: "Une adresse au cœur de Funtana", text: "À Funtana, à deux pas du littoral istrien, l'Apartman Nikolić est facile à trouver. Cliquez sur la carte pour obtenir l'itinéraire jusqu'à la maison.", cta: "Itinéraire sur Google Maps" }
     },
@@ -101,9 +102,9 @@ const I18N = {
       hero: { eyebrow: "À PROPOS", title: "L'histoire de l'Apartman Nikolić", text: "Trois appartements indépendants avec piscine privée, nés de la restauration d'une bâtisse en pierre transmise de génération en génération, à deux pas du littoral istrien." },
       story: ["L'Apartman Nikolić est né de la restauration d'une bâtisse en pierre familiale, à Funtana, à deux pas du littoral istrien. Plutôt que d'en faire une simple location saisonnière, la famille a choisi d'y créer trois appartements indépendants et identiques — deux chambres, un salon et une cuisine équipée chacun — pensés pour accueillir chaleureusement chaque groupe tout en préservant l'intimité de chacun.", "Ici, la piscine privée et l'espace barbecue deviennent le lieu des retrouvailles, tandis que chaque appartement reste un cocon indépendant pour se reposer. Les matériaux d'origine — pierre, bois, chaux — ont été mis en valeur pour apporter le confort d'un séjour moderne. Et parce que l'accueil reste avant tout une affaire de famille, c'est elle-même qui répond à vos messages et prépare votre arrivée, du premier échange jusqu'à votre départ."],
       values: [
-        { icon: "🏺", title: "Authenticité", text: "Une maison en pierre restaurée dans le respect de son architecture d'origine." },
-        { icon: "🤝", title: "Accueil personnalisé", text: "Un contact direct avec la famille, du premier message à votre départ." },
-        { icon: "🌿", title: "Ancrage local", text: "Produits du jardin, adresses de confiance et conseils pour explorer les environs." }
+        { title: "Authenticité", text: "Une maison en pierre restaurée dans le respect de son architecture d'origine." },
+        { title: "Accueil personnalisé", text: "Un contact direct avec la famille, du premier message à votre départ." },
+        { title: "Ancrage local", text: "Produits du jardin, adresses de confiance et conseils pour explorer les environs." }
       ],
       amenitiesSection: {
         eyebrow: "ÉQUIPEMENTS INCLUS", title: "Des équipements pensés pour votre confort",
@@ -131,9 +132,9 @@ const I18N = {
         { author: "Sophie D.", origin: "France", stars: 5, date: "Juillet 2026", quote: "Un accueil chaleureux et un appartement impeccable avec vue sur la mer. La piscine privée restera un des meilleurs souvenirs de nos vacances." },
         { author: "Thomas M.", origin: "Allemagne", stars: 5, date: "Juin 2026", quote: "Emplacement calme, magnifique cour intérieure et hôtes très réactifs. Nous reviendrons, c'est certain !" },
         { author: "Ivana K.", origin: "Croatie", stars: 5, date: "Mai 2026", quote: "Une magnifique maison en pierre, la chambre Kamen est un vrai bijou. Tout était propre, calme et très authentique." },
-        { author: "James H.", origin: "Royaume-Uni", stars: 4, date: "Août 2026", quote: "De belles chambres et un excellent emplacement près de la vieille ville. La réservation par email était un peu inhabituelle au début, mais le propriétaire a répondu en quelques heures." },
-        { author: "Laura B.", origin: "Autriche", stars: 5, date: "Juillet 2026", quote: "Le jardin d'oliviers devant la chambre Maslina est tout simplement magnifique. Parfait pour se détendre après une journée à la plage." },
-        { author: "Noah V.", origin: "Pays-Bas", stars: 5, date: "Septembre 2026", quote: "Tout était exactement conforme à la description, de l'architecture en pierre à la vue sur mer. Fortement recommandé pour un séjour paisible." }
+        { author: "James H.", origin: "Serbie", stars: 4, date: "Août 2026", quote: "De belles chambres et un excellent emplacement près de la vieille ville. La réservation par email était un peu inhabituelle au début, mais le propriétaire a répondu en quelques heures." },
+        { author: "Laura B.", origin: "France", stars: 5, date: "Juillet 2026", quote: "Le jardin d'oliviers devant la chambre Maslina est tout simplement magnifique. Parfait pour se détendre après une journée à la plage." },
+        { author: "Noah V.", origin: "Allemagne", stars: 5, date: "Septembre 2026", quote: "Tout était exactement conforme à la description, de l'architecture en pierre à la vue sur mer. Fortement recommandé pour un séjour paisible." }
       ]
     },
     faqPage: {
@@ -195,12 +196,13 @@ const I18N = {
       whySection: {
         eyebrow: "WHY CHOOSE US", title: "Hospitality on a human scale",
         items: [
-          { icon: "🗝️", title: "Simple booking", text: "Select your dates, get the price instantly and send your request in one click." },
-          { icon: "🌊", title: "Steps from the sea", text: "The house is a few minutes' walk from the coastline and the old town." },
-          { icon: "🏊", title: "Private pool", text: "Every apartment includes access to the residence's private pool and barbecue area." },
-          { icon: "💬", title: "Fast replies", text: "Got a question? Reach us directly on WhatsApp — we reply within 24 hours." }
+          { title: "Simple booking", text: "Select your dates, get the price instantly and send your request in one click." },
+          { title: "Steps from the sea", text: "The house is a few minutes' walk from the coastline and the old town." },
+          { title: "Private pool", text: "Every apartment includes access to the residence's private pool and barbecue area." },
+          { title: "Fast replies", text: "Got a question? Reach us directly on WhatsApp — we reply within 24 hours." }
         ]
       },
+      testimonialsSection: { eyebrow: "GUEST REVIEWS", title: "What our guests say" },
       ctaBanner: { title: "Ready to book your stay?", text: "Choose your room, your dates, and get your summary instantly.", button: "Start my booking" },
       locationSection: { eyebrow: "FIND US", title: "An address in the heart of Funtana", text: "In Funtana, just steps from the Istrian coastline, Apartman Nikolić is easy to find. Click the map to get directions to the house.", cta: "Get directions on Google Maps" }
     },
@@ -243,9 +245,9 @@ const I18N = {
       hero: { eyebrow: "ABOUT", title: "The story of Apartman Nikolić", text: "Three independent apartments with a private pool, born from the restoration of a family stone house passed down through generations, just steps from the Istrian coastline." },
       story: ["Apartman Nikolić began with the restoration of a family stone house in Funtana, just steps from the Istrian coastline. Rather than turning it into a simple seasonal rental, the family chose to create three independent, identical apartments — each with two bedrooms, a living room and a fully equipped kitchen — designed to welcome every group warmly while preserving everyone's privacy.", "Here, the private pool and barbecue area become the gathering place, while each apartment remains its own independent retreat for resting. The original materials — stone, wood, lime plaster — have been carefully preserved to bring the comfort of a modern stay. And because hospitality here is above all a family affair, it's the family itself who answers your messages and prepares your arrival, from the first message to your departure."],
       values: [
-        { icon: "🏺", title: "Authenticity", text: "A stone house restored with respect for its original architecture." },
-        { icon: "🤝", title: "Personal welcome", text: "Direct contact with the family, from your first message to your departure." },
-        { icon: "🌿", title: "Local roots", text: "Garden produce, trusted addresses and tips for exploring the surroundings." }
+        { title: "Authenticity", text: "A stone house restored with respect for its original architecture." },
+        { title: "Personal welcome", text: "Direct contact with the family, from your first message to your departure." },
+        { title: "Local roots", text: "Garden produce, trusted addresses and tips for exploring the surroundings." }
       ],
       amenitiesSection: {
         eyebrow: "INCLUDED AMENITIES", title: "Amenities designed for your comfort",
@@ -273,9 +275,9 @@ const I18N = {
         { author: "Sophie D.", origin: "France", stars: 5, date: "July 2026", quote: "A warm welcome and a spotless apartment with sea views. The private pool will stay one of the best memories of our holiday." },
         { author: "Thomas M.", origin: "Germany", stars: 5, date: "June 2026", quote: "Quiet location, beautiful inner courtyard, and very responsive hosts. We'll definitely be back!" },
         { author: "Ivana K.", origin: "Croatia", stars: 5, date: "May 2026", quote: "A beautiful stone house — the Kamen room is a real gem. Everything was clean, quiet and very authentic." },
-        { author: "James H.", origin: "United Kingdom", stars: 4, date: "August 2026", quote: "Lovely rooms and a great location close to the old town. Booking by email felt a bit unusual at first, but the owner replied within hours." },
-        { author: "Laura B.", origin: "Austria", stars: 5, date: "July 2026", quote: "The olive garden outside the Maslina room is simply dreamy. Perfect for relaxing after a day at the beach." },
-        { author: "Noah V.", origin: "Netherlands", stars: 5, date: "September 2026", quote: "Everything was exactly as described, from the stone architecture to the sea view. Highly recommended for a peaceful stay." }
+        { author: "James H.", origin: "Serbia", stars: 4, date: "August 2026", quote: "Lovely rooms and a great location close to the old town. Booking by email felt a bit unusual at first, but the owner replied within hours." },
+        { author: "Laura B.", origin: "France", stars: 5, date: "July 2026", quote: "The olive garden outside the Maslina room is simply dreamy. Perfect for relaxing after a day at the beach." },
+        { author: "Noah V.", origin: "Germany", stars: 5, date: "September 2026", quote: "Everything was exactly as described, from the stone architecture to the sea view. Highly recommended for a peaceful stay." }
       ]
     },
     faqPage: {
@@ -337,12 +339,13 @@ const I18N = {
       whySection: {
         eyebrow: "WARUM WIR", title: "Gastfreundschaft im kleinen Rahmen",
         items: [
-          { icon: "🗝️", title: "Einfache Buchung", text: "Wählen Sie Ihre Daten, sehen Sie den Preis sofort und senden Sie Ihre Anfrage mit einem Klick." },
-          { icon: "🌊", title: "Nah am Meer", text: "Das Haus liegt nur wenige Gehminuten von der Küste und der Altstadt entfernt." },
-          { icon: "🏊", title: "Privater Pool", text: "Jedes Apartment bietet Zugang zum privaten Pool und zum Grillbereich der Anlage." },
-          { icon: "💬", title: "Schnelle Antwort", text: "Eine Frage? Schreiben Sie uns direkt über WhatsApp — wir antworten innerhalb von 24 Stunden." }
+          { title: "Einfache Buchung", text: "Wählen Sie Ihre Daten, sehen Sie den Preis sofort und senden Sie Ihre Anfrage mit einem Klick." },
+          { title: "Nah am Meer", text: "Das Haus liegt nur wenige Gehminuten von der Küste und der Altstadt entfernt." },
+          { title: "Privater Pool", text: "Jedes Apartment bietet Zugang zum privaten Pool und zum Grillbereich der Anlage." },
+          { title: "Schnelle Antwort", text: "Eine Frage? Schreiben Sie uns direkt über WhatsApp — wir antworten innerhalb von 24 Stunden." }
         ]
       },
+      testimonialsSection: { eyebrow: "GÄSTEBEWERTUNGEN", title: "Was unsere Gäste sagen" },
       ctaBanner: { title: "Bereit, Ihren Aufenthalt zu buchen?", text: "Wählen Sie Ihr Zimmer, Ihre Daten, und erhalten Sie sofort Ihre Zusammenfassung.", button: "Jetzt buchen" },
       locationSection: { eyebrow: "SO FINDEN SIE UNS", title: "Eine Adresse im Herzen von Funtana", text: "In Funtana, nur wenige Schritte von der istrischen Küste entfernt, ist das Apartman Nikolić leicht zu finden. Klicken Sie auf die Karte, um die Route zum Haus zu erhalten.", cta: "Route auf Google Maps" }
     },
@@ -385,9 +388,9 @@ const I18N = {
       hero: { eyebrow: "ÜBER UNS", title: "Die Geschichte von Apartman Nikolić", text: "Drei unabhängige Apartments mit privatem Pool, entstanden aus der Restaurierung eines seit Generationen in Familienbesitz befindlichen Steinhauses, nur wenige Schritte von der istrischen Küste entfernt." },
       story: ["Das Apartman Nikolić entstand aus der Restaurierung eines Familiensteinhauses in Funtana, nur wenige Schritte von der istrischen Küste entfernt. Anstatt daraus eine einfache Ferienunterkunft zu machen, entschied sich die Familie, drei unabhängige, identische Apartments zu schaffen — jedes mit zwei Schlafzimmern, einem Wohnzimmer und einer voll ausgestatteten Küche — konzipiert, um jede Gruppe herzlich willkommen zu heißen und dabei die Privatsphäre aller zu wahren.", "Hier werden der private Pool und der Grillbereich zum Treffpunkt, während jedes Apartment ein eigenständiger Rückzugsort zum Ausruhen bleibt. Die ursprünglichen Materialien — Stein, Holz, Kalk — wurden bewahrt, um den Komfort eines modernen Aufenthalts zu bieten. Und weil Gastfreundschaft hier vor allem Familiensache ist, ist es die Familie selbst, die auf Ihre Nachrichten antwortet und Ihre Ankunft vorbereitet, von der ersten Nachricht bis zu Ihrer Abreise."],
       values: [
-        { icon: "🏺", title: "Authentizität", text: "Ein Steinhaus, restauriert unter Wahrung seiner ursprünglichen Architektur." },
-        { icon: "🤝", title: "Persönlicher Empfang", text: "Direkter Kontakt mit der Familie, von Ihrer ersten Nachricht bis zur Abreise." },
-        { icon: "🌿", title: "Lokale Verwurzelung", text: "Erzeugnisse aus dem Garten, vertrauenswürdige Adressen und Tipps zur Umgebung." }
+        { title: "Authentizität", text: "Ein Steinhaus, restauriert unter Wahrung seiner ursprünglichen Architektur." },
+        { title: "Persönlicher Empfang", text: "Direkter Kontakt mit der Familie, von Ihrer ersten Nachricht bis zur Abreise." },
+        { title: "Lokale Verwurzelung", text: "Erzeugnisse aus dem Garten, vertrauenswürdige Adressen und Tipps zur Umgebung." }
       ],
       amenitiesSection: {
         eyebrow: "INKLUSIVE AUSSTATTUNG", title: "Ausstattung für Ihren Komfort",
@@ -415,9 +418,9 @@ const I18N = {
         { author: "Sophie D.", origin: "Frankreich", stars: 5, date: "Juli 2026", quote: "Ein herzlicher Empfang und ein makelloses Apartment mit Meerblick. Der private Pool bleibt eine der schönsten Erinnerungen unseres Urlaubs." },
         { author: "Thomas M.", origin: "Deutschland", stars: 5, date: "Juni 2026", quote: "Ruhige Lage, wunderschöner Innenhof und sehr reaktionsschnelle Gastgeber. Wir kommen definitiv wieder!" },
         { author: "Ivana K.", origin: "Kroatien", stars: 5, date: "Mai 2026", quote: "Ein wunderschönes Steinhaus – das Zimmer Kamen ist ein echtes Juwel. Alles war sauber, ruhig und sehr authentisch." },
-        { author: "James H.", origin: "Vereinigtes Königreich", stars: 4, date: "August 2026", quote: "Schöne Zimmer und eine tolle Lage nahe der Altstadt. Die Buchung per E-Mail war anfangs etwas ungewohnt, aber der Gastgeber antwortete innerhalb weniger Stunden." },
-        { author: "Laura B.", origin: "Österreich", stars: 5, date: "Juli 2026", quote: "Der Olivengarten vor dem Zimmer Maslina ist einfach traumhaft. Perfekt zum Entspannen nach einem Tag am Strand." },
-        { author: "Noah V.", origin: "Niederlande", stars: 5, date: "September 2026", quote: "Alles war genau wie beschrieben, von der Steinarchitektur bis zum Meerblick. Sehr empfehlenswert für einen ruhigen Aufenthalt." }
+        { author: "James H.", origin: "Serbien", stars: 4, date: "August 2026", quote: "Schöne Zimmer und eine tolle Lage nahe der Altstadt. Die Buchung per E-Mail war anfangs etwas ungewohnt, aber der Gastgeber antwortete innerhalb weniger Stunden." },
+        { author: "Laura B.", origin: "Frankreich", stars: 5, date: "Juli 2026", quote: "Der Olivengarten vor dem Zimmer Maslina ist einfach traumhaft. Perfekt zum Entspannen nach einem Tag am Strand." },
+        { author: "Noah V.", origin: "Deutschland", stars: 5, date: "September 2026", quote: "Alles war genau wie beschrieben, von der Steinarchitektur bis zum Meerblick. Sehr empfehlenswert für einen ruhigen Aufenthalt." }
       ]
     },
     faqPage: {
@@ -479,12 +482,13 @@ const I18N = {
       whySection: {
         eyebrow: "ZAŠTO ODABRATI NAS", title: "Dobrodošlica u malom, obiteljskom okruženju",
         items: [
-          { icon: "🗝️", title: "Jednostavna rezervacija", text: "Odaberite datume, odmah dobijte cijenu i pošaljite upit jednim klikom." },
-          { icon: "🌊", title: "Blizina mora", text: "Kuća se nalazi nekoliko minuta hoda od obale i starog grada." },
-          { icon: "🏊", title: "Privatni bazen", text: "Svaki apartman uključuje pristup privatnom bazenu i prostoru za roštilj kompleksa." },
-          { icon: "💬", title: "Brz odgovor", text: "Imate pitanje? Javite nam se izravno putem WhatsAppa — odgovaramo unutar 24 sata." }
+          { title: "Jednostavna rezervacija", text: "Odaberite datume, odmah dobijte cijenu i pošaljite upit jednim klikom." },
+          { title: "Blizina mora", text: "Kuća se nalazi nekoliko minuta hoda od obale i starog grada." },
+          { title: "Privatni bazen", text: "Svaki apartman uključuje pristup privatnom bazenu i prostoru za roštilj kompleksa." },
+          { title: "Brz odgovor", text: "Imate pitanje? Javite nam se izravno putem WhatsAppa — odgovaramo unutar 24 sata." }
         ]
       },
+      testimonialsSection: { eyebrow: "RECENZIJE GOSTIJU", title: "Što kažu naši gosti" },
       ctaBanner: { title: "Spremni rezervirati boravak?", text: "Odaberite sobu, datume i odmah dobijte sažetak rezervacije.", button: "Započni rezervaciju" },
       locationSection: { eyebrow: "GDJE SMO", title: "Adresa u srcu Funtane", text: "U Funtani, samo nekoliko koraka od istarske obale, Apartman Nikolić lako je pronaći. Kliknite na kartu za navigaciju do kuće.", cta: "Navigacija na Google Mapsu" }
     },
@@ -527,9 +531,9 @@ const I18N = {
       hero: { eyebrow: "O NAMA", title: "Priča Apartmana Nikolić", text: "Tri samostalna apartmana s privatnim bazenom, nastala obnovom obiteljske kamene kuće koja se prenosi s koljena na koljeno, samo nekoliko koraka od istarske obale." },
       story: ["Apartman Nikolić nastao je obnovom obiteljske kamene kuće u Funtani, samo nekoliko koraka od istarske obale. Umjesto da je pretvori u obični sezonski smještaj, obitelj je odlučila stvoriti tri samostalna, identična apartmana — svaki s dvije spavaće sobe, dnevnim boravkom i potpuno opremljenom kuhinjom — osmišljena da toplo dočekaju svaku skupinu, uz očuvanje privatnosti svakoga.", "Ovdje privatni bazen i prostor za roštilj postaju mjesto druženja, dok svaki apartman ostaje samostalno utočište za odmor. Izvorni materijali — kamen, drvo, vapno — pažljivo su očuvani kako bi pružili udobnost modernog boravka. A budući da je gostoprimstvo ovdje prije svega obiteljska stvar, upravo obitelj odgovara na vaše poruke i priprema vaš dolazak, od prve poruke do vašeg odlaska."],
       values: [
-        { icon: "🏺", title: "Autentičnost", text: "Kamena kuća obnovljena uz poštovanje izvorne arhitekture." },
-        { icon: "🤝", title: "Osobna dobrodošlica", text: "Izravan kontakt s obitelji, od prve poruke do vašeg odlaska." },
-        { icon: "🌿", title: "Lokalna povezanost", text: "Proizvodi iz vrta, provjerene preporuke i savjeti za istraživanje okolice." }
+        { title: "Autentičnost", text: "Kamena kuća obnovljena uz poštovanje izvorne arhitekture." },
+        { title: "Osobna dobrodošlica", text: "Izravan kontakt s obitelji, od prve poruke do vašeg odlaska." },
+        { title: "Lokalna povezanost", text: "Proizvodi iz vrta, provjerene preporuke i savjeti za istraživanje okolice." }
       ],
       amenitiesSection: {
         eyebrow: "UKLJUČENA OPREMA", title: "Oprema osmišljena za vašu udobnost",
@@ -557,9 +561,9 @@ const I18N = {
         { author: "Sophie D.", origin: "Francuska", stars: 5, date: "srpanj 2026.", quote: "Topla dobrodošlica i besprijekoran apartman s pogledom na more. Privatni bazen ostat će jedna od najljepših uspomena s odmora." },
         { author: "Thomas M.", origin: "Njemačka", stars: 5, date: "lipanj 2026.", quote: "Mirna lokacija, prekrasno unutarnje dvorište i vrlo brzi domaćini. Sigurno ćemo se vratiti!" },
         { author: "Ivana K.", origin: "Hrvatska", stars: 5, date: "svibanj 2026.", quote: "Prekrasna kamena kuća, soba Kamen je pravi biser. Sve je bilo čisto, tiho i vrlo autentično." },
-        { author: "James H.", origin: "Ujedinjeno Kraljevstvo", stars: 4, date: "kolovoz 2026.", quote: "Lijepe sobe i odlična lokacija blizu starog grada. Rezervacija putem e-maila isprva je djelovala neobično, ali vlasnik je odgovorio unutar nekoliko sati." },
-        { author: "Laura B.", origin: "Austrija", stars: 5, date: "srpanj 2026.", quote: "Maslinik ispred sobe Maslina jednostavno je predivan. Savršen za opuštanje nakon dana provedenog na plaži." },
-        { author: "Noah V.", origin: "Nizozemska", stars: 5, date: "rujan 2026.", quote: "Sve je bilo točno onako kako je opisano, od kamene arhitekture do pogleda na more. Toplo preporučujem za miran odmor." }
+        { author: "James H.", origin: "Srbija", stars: 4, date: "kolovoz 2026.", quote: "Lijepe sobe i odlična lokacija blizu starog grada. Rezervacija putem e-maila isprva je djelovala neobično, ali vlasnik je odgovorio unutar nekoliko sati." },
+        { author: "Laura B.", origin: "Francuska", stars: 5, date: "srpanj 2026.", quote: "Maslinik ispred sobe Maslina jednostavno je predivan. Savršen za opuštanje nakon dana provedenog na plaži." },
+        { author: "Noah V.", origin: "Njemačka", stars: 5, date: "rujan 2026.", quote: "Sve je bilo točno onako kako je opisano, od kamene arhitekture do pogleda na more. Toplo preporučujem za miran odmor." }
       ]
     },
     faqPage: {
