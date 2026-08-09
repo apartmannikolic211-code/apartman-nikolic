@@ -98,13 +98,30 @@ const I18N = {
       summary: { title: "Récapitulatif de réservation", roomLabel: "Chambre", arrivalLabel: "Arrivée", departureLabel: "Départ", nightsLabel: "Nombre de nuits", totalLabel: "Total du séjour", emptyRoom: "Non sélectionnée", emptyValue: "—", stampText: "Demande envoyée" }
     },
     aboutPage: {
-      hero: { eyebrow: "À PROPOS", title: "L'histoire de l'Apartman Nikolić", text: "Une maison en pierre restaurée avec soin, portée par une famille attachée à l'art de recevoir." },
-      story: ["L'Apartman Nikolić est né de la rénovation d'une bâtisse en pierre transmise de génération en génération. Plutôt que de la transformer en simple location saisonnière, la famille a choisi d'en faire une maison d'hôtes à taille humaine, avec trois chambres seulement, pour préserver l'intimité et la qualité de l'accueil.", "Chaque pièce a été pensée pour mettre en valeur les matériaux d'origine — pierre, bois, chaux — tout en apportant le confort attendu d'un séjour moderne. Ici, pas de réception impersonnelle : c'est la famille elle-même qui répond à vos messages et prépare votre arrivée."],
+      hero: { eyebrow: "À PROPOS", title: "L'histoire de l'Apartman Nikolić", text: "Trois appartements indépendants avec piscine privée, nés de la restauration d'une bâtisse en pierre transmise de génération en génération, à deux pas du littoral istrien." },
+      story: ["L'Apartman Nikolić est né de la restauration d'une bâtisse en pierre familiale, à Funtana, à deux pas du littoral istrien. Plutôt que d'en faire une simple location saisonnière, la famille a choisi d'y créer trois appartements indépendants et identiques — deux chambres, un salon et une cuisine équipée chacun — pensés pour accueillir chaleureusement chaque groupe tout en préservant l'intimité de chacun.", "Ici, la piscine privée et l'espace barbecue deviennent le lieu des retrouvailles, tandis que chaque appartement reste un cocon indépendant pour se reposer. Les matériaux d'origine — pierre, bois, chaux — ont été mis en valeur pour apporter le confort d'un séjour moderne. Et parce que l'accueil reste avant tout une affaire de famille, c'est elle-même qui répond à vos messages et prépare votre arrivée, du premier échange jusqu'à votre départ."],
       values: [
         { icon: "🏺", title: "Authenticité", text: "Une maison en pierre restaurée dans le respect de son architecture d'origine." },
         { icon: "🤝", title: "Accueil personnalisé", text: "Un contact direct avec la famille, du premier message à votre départ." },
         { icon: "🌿", title: "Ancrage local", text: "Produits du jardin, adresses de confiance et conseils pour explorer les environs." }
       ],
+      amenitiesSection: {
+        eyebrow: "ÉQUIPEMENTS INCLUS", title: "Des équipements pensés pour votre confort",
+        items: [
+          { title: "Piscine privée", text: "Rafraîchissez-vous et profitez du soleil en toute tranquillité." },
+          { title: "Espace barbecue", text: "Un coin dédié aux grillades et aux repas partagés en plein air." },
+          { title: "Parking privé", text: "Stationnement sécurisé et facile directement dans la propriété." },
+          { title: "Wi-Fi haut débit", text: "Connexion Internet incluse dans l'ensemble de la propriété." },
+          { title: "Console PS5", text: "Pour le plaisir des petits et grands amateurs de jeux vidéo." }
+        ]
+      },
+      highlightsSection: {
+        eyebrow: "AVANTAGES", title: "Les Plus de cet Hébergement",
+        items: [
+          { title: "Indépendance et convivialité", text: "Profitez de moments partagés autour de la piscine ou du barbecue, tout en conservant votre espace privé dans votre propre appartement." },
+          { title: "Confort tout équipement", text: "Idéal aussi bien pour des vacances relaxantes que pour un séjour dynamique, avec des équipements modernes pour tous les âges." }
+        ]
+      },
       hostTitle: "À votre service", hostText: "N'hésitez pas à nous contacter avant, pendant ou après votre séjour : nous sommes joignables par WhatsApp, téléphone ou email."
     },
     reviewsPage: {
@@ -223,13 +240,30 @@ const I18N = {
       summary: { title: "Booking summary", roomLabel: "Room", arrivalLabel: "Arrival", departureLabel: "Departure", nightsLabel: "Number of nights", totalLabel: "Total stay", emptyRoom: "Not selected", emptyValue: "—", stampText: "Request sent" }
     },
     aboutPage: {
-      hero: { eyebrow: "ABOUT", title: "The story of Apartman Nikolić", text: "A stone house carefully restored, run by a family devoted to the art of hospitality." },
-      story: ["Apartman Nikolić was born from the renovation of a stone house passed down through generations of the family. Rather than turning it into an anonymous holiday rental, the family chose to run it as a small-scale guesthouse with only three rooms, to preserve intimacy and the quality of the welcome.", "Every room was designed to showcase the original materials — stone, wood, lime plaster — while offering the comfort expected of a modern stay. There's no impersonal front desk here: the family itself answers your messages and prepares your arrival."],
+      hero: { eyebrow: "ABOUT", title: "The story of Apartman Nikolić", text: "Three independent apartments with a private pool, born from the restoration of a family stone house passed down through generations, just steps from the Istrian coastline." },
+      story: ["Apartman Nikolić began with the restoration of a family stone house in Funtana, just steps from the Istrian coastline. Rather than turning it into a simple seasonal rental, the family chose to create three independent, identical apartments — each with two bedrooms, a living room and a fully equipped kitchen — designed to welcome every group warmly while preserving everyone's privacy.", "Here, the private pool and barbecue area become the gathering place, while each apartment remains its own independent retreat for resting. The original materials — stone, wood, lime plaster — have been carefully preserved to bring the comfort of a modern stay. And because hospitality here is above all a family affair, it's the family itself who answers your messages and prepares your arrival, from the first message to your departure."],
       values: [
         { icon: "🏺", title: "Authenticity", text: "A stone house restored with respect for its original architecture." },
         { icon: "🤝", title: "Personal welcome", text: "Direct contact with the family, from your first message to your departure." },
         { icon: "🌿", title: "Local roots", text: "Garden produce, trusted addresses and tips for exploring the surroundings." }
       ],
+      amenitiesSection: {
+        eyebrow: "INCLUDED AMENITIES", title: "Amenities designed for your comfort",
+        items: [
+          { title: "Private pool", text: "Cool off and enjoy the sun in complete peace and quiet." },
+          { title: "Barbecue area", text: "A dedicated spot for grilling and sharing meals outdoors." },
+          { title: "Private parking", text: "Safe, easy parking right on the property." },
+          { title: "High-speed Wi-Fi", text: "Internet access included throughout the property." },
+          { title: "PS5 console", text: "For video game lovers of all ages to enjoy." }
+        ]
+      },
+      highlightsSection: {
+        eyebrow: "HIGHLIGHTS", title: "What Makes This Place Special",
+        items: [
+          { title: "Independence and togetherness", text: "Enjoy shared moments by the pool or at the barbecue, while keeping your own private space in your own apartment." },
+          { title: "Fully equipped comfort", text: "Ideal for a relaxing getaway or a lively stay, with modern amenities for all ages." }
+        ]
+      },
       hostTitle: "At your service", hostText: "Feel free to reach out before, during or after your stay: we're reachable by WhatsApp, phone or email."
     },
     reviewsPage: {
@@ -348,13 +382,30 @@ const I18N = {
       summary: { title: "Buchungsübersicht", roomLabel: "Zimmer", arrivalLabel: "Anreise", departureLabel: "Abreise", nightsLabel: "Anzahl Nächte", totalLabel: "Gesamtpreis", emptyRoom: "Nicht ausgewählt", emptyValue: "—", stampText: "Anfrage gesendet" }
     },
     aboutPage: {
-      hero: { eyebrow: "ÜBER UNS", title: "Die Geschichte von Apartman Nikolić", text: "Ein sorgfältig restauriertes Steinhaus, geführt von einer Familie mit Leidenschaft für Gastfreundschaft." },
-      story: ["Apartman Nikolić entstand aus der Renovierung eines steinernen Hauses, das seit Generationen in Familienbesitz ist. Anstatt daraus eine anonyme Ferienunterkunft zu machen, entschied sich die Familie für ein kleines Gästehaus mit nur drei Zimmern, um Privatsphäre und die Qualität des Empfangs zu bewahren.", "Jeder Raum wurde gestaltet, um die ursprünglichen Materialien – Stein, Holz, Kalkputz – zur Geltung zu bringen und gleichzeitig den Komfort eines modernen Aufenthalts zu bieten. Hier gibt es keinen unpersönlichen Empfang: Die Familie selbst beantwortet Ihre Nachrichten und bereitet Ihre Ankunft vor."],
+      hero: { eyebrow: "ÜBER UNS", title: "Die Geschichte von Apartman Nikolić", text: "Drei unabhängige Apartments mit privatem Pool, entstanden aus der Restaurierung eines seit Generationen in Familienbesitz befindlichen Steinhauses, nur wenige Schritte von der istrischen Küste entfernt." },
+      story: ["Das Apartman Nikolić entstand aus der Restaurierung eines Familiensteinhauses in Funtana, nur wenige Schritte von der istrischen Küste entfernt. Anstatt daraus eine einfache Ferienunterkunft zu machen, entschied sich die Familie, drei unabhängige, identische Apartments zu schaffen — jedes mit zwei Schlafzimmern, einem Wohnzimmer und einer voll ausgestatteten Küche — konzipiert, um jede Gruppe herzlich willkommen zu heißen und dabei die Privatsphäre aller zu wahren.", "Hier werden der private Pool und der Grillbereich zum Treffpunkt, während jedes Apartment ein eigenständiger Rückzugsort zum Ausruhen bleibt. Die ursprünglichen Materialien — Stein, Holz, Kalk — wurden bewahrt, um den Komfort eines modernen Aufenthalts zu bieten. Und weil Gastfreundschaft hier vor allem Familiensache ist, ist es die Familie selbst, die auf Ihre Nachrichten antwortet und Ihre Ankunft vorbereitet, von der ersten Nachricht bis zu Ihrer Abreise."],
       values: [
         { icon: "🏺", title: "Authentizität", text: "Ein Steinhaus, restauriert unter Wahrung seiner ursprünglichen Architektur." },
         { icon: "🤝", title: "Persönlicher Empfang", text: "Direkter Kontakt mit der Familie, von Ihrer ersten Nachricht bis zur Abreise." },
         { icon: "🌿", title: "Lokale Verwurzelung", text: "Erzeugnisse aus dem Garten, vertrauenswürdige Adressen und Tipps zur Umgebung." }
       ],
+      amenitiesSection: {
+        eyebrow: "INKLUSIVE AUSSTATTUNG", title: "Ausstattung für Ihren Komfort",
+        items: [
+          { title: "Privater Pool", text: "Erfrischen Sie sich und genießen Sie die Sonne in aller Ruhe." },
+          { title: "Grillbereich", text: "Eine eigene Ecke zum Grillen und für gemeinsame Mahlzeiten im Freien." },
+          { title: "Privater Parkplatz", text: "Sicheres und bequemes Parken direkt auf dem Grundstück." },
+          { title: "Highspeed-WLAN", text: "Internetzugang im gesamten Anwesen inbegriffen." },
+          { title: "PS5-Konsole", text: "Zur Freude kleiner und großer Videospiel-Fans." }
+        ]
+      },
+      highlightsSection: {
+        eyebrow: "VORTEILE", title: "Was diese Unterkunft besonders macht",
+        items: [
+          { title: "Unabhängigkeit und Geselligkeit", text: "Genießen Sie gemeinsame Momente am Pool oder beim Grillen, während Sie Ihren eigenen privaten Bereich in Ihrem Apartment behalten." },
+          { title: "Rundum ausgestatteter Komfort", text: "Ideal sowohl für einen erholsamen Urlaub als auch für einen aktiven Aufenthalt, mit moderner Ausstattung für jedes Alter." }
+        ]
+      },
       hostTitle: "Für Sie da", hostText: "Kontaktieren Sie uns gerne vor, während oder nach Ihrem Aufenthalt: Wir sind per WhatsApp, Telefon oder E-Mail erreichbar."
     },
     reviewsPage: {
@@ -473,13 +524,30 @@ const I18N = {
       summary: { title: "Sažetak rezervacije", roomLabel: "Soba", arrivalLabel: "Dolazak", departureLabel: "Odlazak", nightsLabel: "Broj noćenja", totalLabel: "Ukupna cijena", emptyRoom: "Nije odabrano", emptyValue: "—", stampText: "Upit poslan" }
     },
     aboutPage: {
-      hero: { eyebrow: "O NAMA", title: "Priča Apartmana Nikolić", text: "Pažljivo obnovljena kamena kuća koju vodi obitelj posvećena umijeću gostoprimstva." },
-      story: ["Apartman Nikolić nastao je obnovom kamene kuće koja se u obitelji prenosi generacijama. Umjesto da je pretvori u bezličan turistički smještaj, obitelj je odlučila voditi je kao malu kuću za goste s tek tri sobe, kako bi sačuvala intimu i kvalitetu dobrodošlice.", "Svaka je soba osmišljena tako da istakne izvorne materijale — kamen, drvo, vapneni malter — uz udobnost koju očekujete od modernog boravka. Ovdje nema bezličnog recepcijskog pulta: obitelj osobno odgovara na vaše poruke i priprema vaš dolazak."],
+      hero: { eyebrow: "O NAMA", title: "Priča Apartmana Nikolić", text: "Tri samostalna apartmana s privatnim bazenom, nastala obnovom obiteljske kamene kuće koja se prenosi s koljena na koljeno, samo nekoliko koraka od istarske obale." },
+      story: ["Apartman Nikolić nastao je obnovom obiteljske kamene kuće u Funtani, samo nekoliko koraka od istarske obale. Umjesto da je pretvori u obični sezonski smještaj, obitelj je odlučila stvoriti tri samostalna, identična apartmana — svaki s dvije spavaće sobe, dnevnim boravkom i potpuno opremljenom kuhinjom — osmišljena da toplo dočekaju svaku skupinu, uz očuvanje privatnosti svakoga.", "Ovdje privatni bazen i prostor za roštilj postaju mjesto druženja, dok svaki apartman ostaje samostalno utočište za odmor. Izvorni materijali — kamen, drvo, vapno — pažljivo su očuvani kako bi pružili udobnost modernog boravka. A budući da je gostoprimstvo ovdje prije svega obiteljska stvar, upravo obitelj odgovara na vaše poruke i priprema vaš dolazak, od prve poruke do vašeg odlaska."],
       values: [
         { icon: "🏺", title: "Autentičnost", text: "Kamena kuća obnovljena uz poštovanje izvorne arhitekture." },
         { icon: "🤝", title: "Osobna dobrodošlica", text: "Izravan kontakt s obitelji, od prve poruke do vašeg odlaska." },
         { icon: "🌿", title: "Lokalna povezanost", text: "Proizvodi iz vrta, provjerene preporuke i savjeti za istraživanje okolice." }
       ],
+      amenitiesSection: {
+        eyebrow: "UKLJUČENA OPREMA", title: "Oprema osmišljena za vašu udobnost",
+        items: [
+          { title: "Privatni bazen", text: "Osvježite se i uživajte na suncu u potpunom miru." },
+          { title: "Prostor za roštilj", text: "Poseban kutak za roštiljanje i obroke na otvorenom." },
+          { title: "Privatni parking", text: "Sigurno i jednostavno parkiranje izravno na imanju." },
+          { title: "Brzi Wi-Fi", text: "Internetska veza uključena na cijelom imanju." },
+          { title: "PS5 konzola", text: "Za užitak malih i velikih ljubitelja videoigara." }
+        ]
+      },
+      highlightsSection: {
+        eyebrow: "PREDNOSTI", title: "Što ovaj smještaj čini posebnim",
+        items: [
+          { title: "Samostalnost i druženje", text: "Uživajte u zajedničkim trenucima uz bazen ili roštilj, uz zadržavanje vlastitog privatnog prostora u svom apartmanu." },
+          { title: "Udobnost s potpunom opremom", text: "Idealno kako za opuštajući odmor tako i za aktivan boravak, uz modernu opremu za sve uzraste." }
+        ]
+      },
       hostTitle: "Na raspolaganju", hostText: "Slobodno nas kontaktirajte prije, tijekom ili nakon boravka: dostupni smo putem WhatsAppa, telefona ili e-maila."
     },
     reviewsPage: {

@@ -595,6 +595,7 @@ h3 { font-size: clamp(1.25rem, 2.4vw, 1.5rem); }
 .value-card { background: var(--color-white); border-radius: var(--radius-md); padding: 24px; box-shadow: var(--shadow-sm); color: var(--color-charcoal); }
 .value-card h3 { color: var(--color-adriatic); }
 .value-card__icon { font-size: 1.6rem; margin-bottom: 12px; display: block; }
+.value-card__icon--plain { color: var(--color-terracotta); font-weight: 600; font-size: 1.3rem; }
 
 .highlight-strip {
   display: flex; flex-wrap: wrap; justify-content: center;
