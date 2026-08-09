@@ -118,9 +118,15 @@ h3 { font-size: clamp(1.25rem, 2.4vw, 1.5rem); }
   height: var(--header-h);
   display: flex;
   align-items: center;
+  border-bottom: 1px solid rgba(169, 139, 79, 0.25);
+}
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: rgba(242, 239, 233, 0.92);
   backdrop-filter: saturate(160%) blur(10px);
-  border-bottom: 1px solid rgba(169, 139, 79, 0.25);
+  z-index: -1;
 }
 .site-header__inner {
   width: 100%;
