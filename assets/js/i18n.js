@@ -23,7 +23,7 @@ const I18N = {
       requiredField: "Ce champ est obligatoire.", invalidEmail: "Merci d'indiquer un email valide.",
       nightsSingular: "nuit", nightsPlural: "nuits", loading: "Chargement…",
       skipToContent: "Aller au contenu", whatsappLabel: "Discuter sur WhatsApp",
-      chooseLanguage: "Choisir la langue", menu: "Menu"
+      chooseLanguage: "Choisir la langue", menu: "Menu", viewFullscreen: "Voir en plein écran"
     },
     nav: { home: "Accueil", rooms: "Nos chambres", gallery: "Galerie", booking: "Réservation", about: "À propos", reviews: "Avis clients", faq: "FAQ", contact: "Contact" },
     meta: {
@@ -84,6 +84,7 @@ const I18N = {
         submitBtn: "Envoyer la demande de réservation", submitting: "Envoi en cours…",
         successMsg: "Votre demande a bien été envoyée ! Le propriétaire vous répondra sous 24 à 48h pour confirmer la disponibilité.",
         errorMsg: "Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous contacter directement par WhatsApp.",
+        mailFallbackMsg: "Votre messagerie va s'ouvrir avec les détails de votre demande pré-remplis. Merci de vérifier puis d'envoyer l'email pour finaliser votre réservation.",
         privacyNote: "Les informations transmises via ce formulaire sont utilisées uniquement pour traiter votre demande de réservation et ne sont stockées sur aucun serveur.",
         selectDatesFirst: "Veuillez sélectionner une chambre et des dates avant d'envoyer votre demande.",
         captchaNote: "Ce formulaire est protégé contre les robots (anti-spam)."
@@ -166,7 +167,7 @@ const I18N = {
       requiredField: "This field is required.", invalidEmail: "Please enter a valid email.",
       nightsSingular: "night", nightsPlural: "nights", loading: "Loading…",
       skipToContent: "Skip to content", whatsappLabel: "Chat on WhatsApp",
-      chooseLanguage: "Choose language", menu: "Menu"
+      chooseLanguage: "Choose language", menu: "Menu", viewFullscreen: "View fullscreen"
     },
     nav: { home: "Home", rooms: "Our Rooms", gallery: "Gallery", booking: "Booking", about: "About", reviews: "Reviews", faq: "FAQ", contact: "Contact" },
     meta: {
@@ -227,6 +228,7 @@ const I18N = {
         submitBtn: "Send booking request", submitting: "Sending…",
         successMsg: "Your request has been sent! The owner will reply within 24 to 48 hours to confirm availability.",
         errorMsg: "Something went wrong while sending. Please try again or contact us directly on WhatsApp.",
+        mailFallbackMsg: "Your email app will open with your request details pre-filled. Please check and send the email to finalize your booking.",
         privacyNote: "Information submitted through this form is used only to process your booking request and is not stored on any server.",
         selectDatesFirst: "Please select a room and dates before sending your request.",
         captchaNote: "This form is protected against bots (anti-spam)."
@@ -309,7 +311,7 @@ const I18N = {
       requiredField: "Dieses Feld ist erforderlich.", invalidEmail: "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
       nightsSingular: "Nacht", nightsPlural: "Nächte", loading: "Wird geladen…",
       skipToContent: "Zum Inhalt springen", whatsappLabel: "Auf WhatsApp chatten",
-      chooseLanguage: "Sprache wählen", menu: "Menü"
+      chooseLanguage: "Sprache wählen", menu: "Menü", viewFullscreen: "Vollbild anzeigen"
     },
     nav: { home: "Startseite", rooms: "Unsere Zimmer", gallery: "Galerie", booking: "Buchung", about: "Über uns", reviews: "Bewertungen", faq: "FAQ", contact: "Kontakt" },
     meta: {
@@ -370,6 +372,7 @@ const I18N = {
         submitBtn: "Buchungsanfrage senden", submitting: "Wird gesendet…",
         successMsg: "Ihre Anfrage wurde gesendet! Der Gastgeber antwortet innerhalb von 24 bis 48 Stunden, um die Verfügbarkeit zu bestätigen.",
         errorMsg: "Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt über WhatsApp.",
+        mailFallbackMsg: "Ihr E-Mail-Programm öffnet sich mit den vorausgefüllten Angaben Ihrer Anfrage. Bitte prüfen Sie die Angaben und senden Sie die E-Mail, um Ihre Buchung abzuschließen.",
         privacyNote: "Die über dieses Formular übermittelten Informationen werden ausschließlich zur Bearbeitung Ihrer Buchungsanfrage verwendet und auf keinem Server gespeichert.",
         selectDatesFirst: "Bitte wählen Sie ein Zimmer und Daten aus, bevor Sie Ihre Anfrage senden.",
         captchaNote: "Dieses Formular ist gegen Bots geschützt (Anti-Spam)."
@@ -452,7 +455,7 @@ const I18N = {
       requiredField: "Ovo polje je obavezno.", invalidEmail: "Unesite valjanu e-mail adresu.",
       nightsSingular: "noć", nightsFew: "noći", nightsMany: "noćenja", loading: "Učitavanje…",
       skipToContent: "Preskoči na sadržaj", whatsappLabel: "Chat na WhatsAppu",
-      chooseLanguage: "Odaberi jezik", menu: "Izbornik"
+      chooseLanguage: "Odaberi jezik", menu: "Izbornik", viewFullscreen: "Prikaz preko cijelog zaslona"
     },
     nav: { home: "Početna", rooms: "Naše sobe", gallery: "Galerija", booking: "Rezervacija", about: "O nama", reviews: "Recenzije", faq: "Česta pitanja", contact: "Kontakt" },
     meta: {
@@ -513,6 +516,7 @@ const I18N = {
         submitBtn: "Pošalji upit za rezervaciju", submitting: "Slanje…",
         successMsg: "Vaš upit je uspješno poslan! Vlasnik će vam odgovoriti unutar 24 do 48 sati kako bi potvrdio dostupnost.",
         errorMsg: "Došlo je do pogreške prilikom slanja. Pokušajte ponovno ili nas kontaktirajte izravno putem WhatsAppa.",
+        mailFallbackMsg: "Vaš program za e-poštu otvorit će se s unaprijed popunjenim podacima vašeg upita. Molimo provjerite i pošaljite e-poruku kako biste dovršili rezervaciju.",
         privacyNote: "Podaci poslani putem ovog obrasca koriste se isključivo za obradu vašeg upita za rezervaciju i ne pohranjuju se ni na jednom poslužitelju.",
         selectDatesFirst: "Molimo odaberite sobu i datume prije slanja upita.",
         captchaNote: "Ovaj obrazac zaštićen je od robota (anti-spam)."

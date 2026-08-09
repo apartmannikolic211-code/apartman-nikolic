@@ -150,6 +150,27 @@ function isEmailjsConfigured() {
     cfg.bookingTemplateId && !cfg.bookingTemplateId.startsWith("YOUR_");
 }
 
+function buildBookingMailtoUrl(templateParams, lang) {
+  const summaryLabels = t("bookingPage.summary", lang);
+  const formLabels = t("bookingPage.form", lang);
+  const subject = formLabels.submitBtn + " — " + templateParams.room_name;
+  const body = [
+    summaryLabels.roomLabel + ": " + templateParams.room_name,
+    summaryLabels.arrivalLabel + ": " + templateParams.arrival_date,
+    summaryLabels.departureLabel + ": " + templateParams.departure_date,
+    summaryLabels.nightsLabel + ": " + templateParams.nights,
+    summaryLabels.totalLabel + ": " + templateParams.total_price,
+    "",
+    formLabels.nameLabel + ": " + templateParams.guest_name,
+    formLabels.phoneLabel + ": " + templateParams.guest_phone,
+    formLabels.emailLabel + ": " + templateParams.guest_email,
+    formLabels.messageLabel + ": " + templateParams.guest_message
+  ].join("\n");
+  return "mailto:" + SITE_CONFIG.contactEmail +
+    "?subject=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(body);
+}
+
 function initBookingForm() {
   const form = document.getElementById("bookingForm");
   if (!form) return;
@@ -208,9 +229,10 @@ function initBookingForm() {
     submitBtn.textContent = t("bookingPage.form.submitting", lang);
 
     if (!isEmailjsConfigured() || typeof emailjs === "undefined") {
-      console.warn("EmailJS n'est pas encore configuré : voir assets/js/config.js et le README.");
+      console.info("EmailJS n'est pas configuré : la demande de réservation part par mailto: vers " + SITE_CONFIG.contactEmail + ". Voir assets/js/config.js et le README pour activer EmailJS.");
+      window.location.href = buildBookingMailtoUrl(templateParams, lang);
       window.setTimeout(function () {
-        showFormFeedback("error", t("bookingPage.form.errorMsg", lang) + " (EmailJS non configuré — voir README.md)");
+        showFormFeedback("success", t("bookingPage.form.mailFallbackMsg", lang));
         submitBtn.disabled = false;
         submitBtn.textContent = originalLabel;
       }, 400);

@@ -111,8 +111,12 @@ recommandé dans le cahier des charges (section 6.3).
 6. Renseigner ces 4 valeurs dans `assets/js/config.js` → `emailjs: { publicKey, serviceId,
    bookingTemplateId, contactTemplateId }`.
 
-Tant que ces valeurs restent à `"YOUR_..."`, les formulaires affichent un message d'erreur explicite
-(au lieu d'échouer silencieusement) et un avertissement apparaît dans la console du navigateur.
+Tant que ces valeurs restent à `"YOUR_..."`, le formulaire de réservation ouvre automatiquement le
+client mail du visiteur (`mailto:`) avec les détails de la demande pré-remplis, adressés à
+`SITE_CONFIG.contactEmail` (actuellement `apartmannikolic211@gmail.com`) — le visiteur n'a plus qu'à
+cliquer sur « Envoyer » dans son client mail. Le formulaire de contact affiche quant à lui un message
+d'erreur explicite tant qu'EmailJS n'est pas configuré. Configurer EmailJS (ci-dessus) permet un envoi
+direct sans passer par le client mail du visiteur, pour les deux formulaires.
 
 ### Anti-spam (section 4.4 du cahier des charges)
 

@@ -9,7 +9,7 @@ const SITE_CONFIG = {
 
   // Display values
   contactPhoneDisplay: "+385 99 123 4567",
-  contactEmail: "info@apartman-nikolic.hr",
+  contactEmail: "apartmannikolic211@gmail.com",
   address: "Dalmatinska ul. 18, 52452 Funtana, Hrvatska",
 
   // Google Maps
@@ -21,10 +21,10 @@ const SITE_CONFIG = {
   // 2) Create two templates (booking request / contact message) → copy their Template IDs
   // 3) Account → General → copy the Public Key, then restrict it to this site's domain
   emailjs: {
-    publicKey: "YOUR_EMAILJS_PUBLIC_KEY",
-    serviceId: "YOUR_EMAILJS_SERVICE_ID",
-    bookingTemplateId: "YOUR_EMAILJS_BOOKING_TEMPLATE_ID",
-    contactTemplateId: "YOUR_EMAILJS_CONTACT_TEMPLATE_ID"
+    publicKey: "hctPajm5vXHD8n3jP",
+    serviceId: "service_s097du9",
+    bookingTemplateId: "template_3aolber",
+    contactTemplateId: "template_lpkpzwc"
   },
 
   // Minimum time (ms) a visitor must spend on a form before submitting.

@@ -13,6 +13,8 @@ function paintRoomPrices() {
 }
 
 let _currentModalRoomId = null;
+let _roomLightboxImages = [];
+let _roomLightboxIndex = 0;
 
 function fillRoomModal(id) {
   const room = getRoomById(id);
@@ -20,6 +22,8 @@ function fillRoomModal(id) {
   const lang = getLang();
   const text = t("rooms." + id, lang);
   _currentModalRoomId = id;
+  _roomLightboxImages = room.images;
+  _roomLightboxIndex = 0;
 
   const numeral = document.getElementById("roomModalNumeral");
   const nameEl = document.getElementById("roomModalName");
@@ -58,12 +62,58 @@ function fillRoomModal(id) {
       if (i === 0) img.classList.add("is-active");
       img.addEventListener("click", function () {
         mainImg.src = src;
+        _roomLightboxIndex = i;
         thumbs.querySelectorAll("img").forEach(function (t) { t.classList.remove("is-active"); });
         img.classList.add("is-active");
       });
       thumbs.appendChild(img);
     });
   }
+}
+
+function openRoomLightbox(index) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  if (!lightbox || !lightboxImg || !_roomLightboxImages.length) return;
+  _roomLightboxIndex = ((index % _roomLightboxImages.length) + _roomLightboxImages.length) % _roomLightboxImages.length;
+  lightboxImg.src = _roomLightboxImages[_roomLightboxIndex];
+  lightbox.classList.add("is-open");
+}
+
+function closeRoomLightbox() {
+  const lightbox = document.getElementById("lightbox");
+  if (!lightbox) return;
+  lightbox.classList.remove("is-open");
+}
+
+function showRoomLightboxDelta(delta) {
+  if (!_roomLightboxImages.length) return;
+  openRoomLightbox(_roomLightboxIndex + delta);
+}
+
+function initRoomLightbox() {
+  const lightbox = document.getElementById("lightbox");
+  if (!lightbox) return;
+
+  const galleryMain = document.getElementById("roomModalGalleryMain");
+  const expandBtn = document.getElementById("roomModalExpandBtn");
+  if (galleryMain) galleryMain.addEventListener("click", function () { openRoomLightbox(_roomLightboxIndex); });
+  if (expandBtn) expandBtn.addEventListener("click", function (e) { e.stopPropagation(); openRoomLightbox(_roomLightboxIndex); });
+
+  const closeBtn = document.getElementById("lightboxClose");
+  const prevBtn = document.getElementById("lightboxPrev");
+  const nextBtn = document.getElementById("lightboxNext");
+  if (closeBtn) closeBtn.addEventListener("click", closeRoomLightbox);
+  if (prevBtn) prevBtn.addEventListener("click", function () { showRoomLightboxDelta(-1); });
+  if (nextBtn) nextBtn.addEventListener("click", function () { showRoomLightboxDelta(1); });
+  lightbox.addEventListener("click", function (e) { if (e.target === lightbox) closeRoomLightbox(); });
+
+  document.addEventListener("keydown", function (e) {
+    if (!lightbox.classList.contains("is-open")) return;
+    if (e.key === "Escape") closeRoomLightbox();
+    if (e.key === "ArrowLeft") showRoomLightboxDelta(-1);
+    if (e.key === "ArrowRight") showRoomLightboxDelta(1);
+  });
 }
 
 function openRoomModal(id) {
@@ -99,6 +149,8 @@ function initRoomModal() {
     if (e.target === overlay) closeRoomModal();
   });
   document.addEventListener("keydown", function (e) {
+    const lightbox = document.getElementById("lightbox");
+    if (lightbox && lightbox.classList.contains("is-open")) return;
     if (e.key === "Escape" && overlay.classList.contains("is-open")) closeRoomModal();
   });
 
@@ -109,6 +161,7 @@ function initRoomModal() {
 document.addEventListener("DOMContentLoaded", function () {
   paintRoomPrices();
   initRoomModal();
+  initRoomLightbox();
 });
 
 document.addEventListener("i18n:changed", function () {
