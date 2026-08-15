@@ -5,10 +5,10 @@
    ========================================================= */
 const SITE_CONFIG = {
   // WhatsApp number in international format, digits only (no "+", no spaces)
-  whatsappNumber: "385991234567",
+  whatsappNumber: "385955401532",
 
   // Display values
-  contactPhoneDisplay: "+385 99 123 4567",
+  contactPhoneDisplay: "+385 95 540 1532",
   contactEmail: "apartmannikolic211@gmail.com",
   address: "Dalmatinska ul. 18, 52452 Funtana, Hrvatska",
 

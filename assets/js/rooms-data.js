@@ -38,12 +38,19 @@ const ROOMS = [
     id: "III",
     slug: "kamen",
     price: 70,
-    heroImage: "https://picsum.photos/seed/apartman-nikolic-kamen-hero/1200/900",
+    heroImage: "assets/img/rooms/kamen/kamen-1.png",
     images: [
-      "https://picsum.photos/seed/apartman-nikolic-kamen-1/1200/900",
-      "https://picsum.photos/seed/apartman-nikolic-kamen-2/1200/900",
-      "https://picsum.photos/seed/apartman-nikolic-kamen-3/1200/900",
-      "https://picsum.photos/seed/apartman-nikolic-kamen-4/1200/900"
+      "assets/img/rooms/kamen/kamen-1.png",
+      "assets/img/rooms/kamen/kamen-2.png",
+      "assets/img/rooms/kamen/kamen-3.png",
+      "assets/img/rooms/kamen/kamen-4.png",
+      "assets/img/rooms/kamen/kamen-5.png",
+      "assets/img/rooms/kamen/kamen-6.png",
+      "assets/img/rooms/kamen/kamen-7.png",
+      "assets/img/rooms/kamen/kamen-8.png",
+      "assets/img/rooms/kamen/kamen-9.png",
+      "assets/img/rooms/kamen/kamen-10.png",
+      "assets/img/rooms/kamen/kamen-11.png"
     ]
   }
 ];
