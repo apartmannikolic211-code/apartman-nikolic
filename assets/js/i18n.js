@@ -22,6 +22,7 @@ const I18N = {
       perNight: "/ nuit", from: "à partir de", send: "Envoyer", sending: "Envoi en cours…",
       requiredField: "Ce champ est obligatoire.", invalidEmail: "Merci d'indiquer un email valide.",
       nightsSingular: "nuit", nightsPlural: "nuits", loading: "Chargement…",
+      guestsSingular: "personne", guestsPlural: "personnes",
       skipToContent: "Aller au contenu", whatsappLabel: "Discuter sur WhatsApp",
       chooseLanguage: "Choisir la langue", menu: "Menu", viewFullscreen: "Voir en plein écran"
     },
@@ -78,9 +79,10 @@ const I18N = {
       hero: { eyebrow: "RÉSERVATION", title: "Réservez votre séjour", text: "Choisissez une chambre, sélectionnez vos dates dans le calendrier, puis envoyez votre demande. Le propriétaire confirme la disponibilité par email sous 24 à 48h." },
       form: {
         roomLabel: "Chambre", roomPlaceholder: "Choisissez une chambre",
+        guestsLabel: "Nombre de personnes", guestsHint: "+30 € / nuit par personne au-delà de 4",
         arrivalLabel: "Arrivée", departureLabel: "Départ",
         nameLabel: "Nom complet", phoneLabel: "Téléphone", emailLabel: "Email",
-        messageLabel: "Message (optionnel)", messagePlaceholder: "Nombre de personnes, heure d'arrivée estimée, demandes particulières…",
+        messageLabel: "Message (optionnel)", messagePlaceholder: "Heure d'arrivée estimée, demandes particulières…",
         submitBtn: "Envoyer la demande de réservation", submitting: "Envoi en cours…",
         successMsg: "Votre demande a bien été envoyée ! Le propriétaire vous répondra sous 24 à 48h pour confirmer la disponibilité.",
         errorMsg: "Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous contacter directement par WhatsApp.",
@@ -97,7 +99,7 @@ const I18N = {
         prevMonth: "Mois précédent", nextMonth: "Mois suivant"
       },
       stayStrip: { arrivalLabel: "ARRIVÉE", departureLabel: "DÉPART", nightsLabel: "NUITS", placeholder: "—" },
-      summary: { title: "Récapitulatif de réservation", roomLabel: "Chambre", arrivalLabel: "Arrivée", departureLabel: "Départ", nightsLabel: "Nombre de nuits", totalLabel: "Total du séjour", emptyRoom: "Non sélectionnée", emptyValue: "—", stampText: "Demande envoyée" }
+      summary: { title: "Récapitulatif de réservation", roomLabel: "Chambre", guestsLabel: "Personnes", arrivalLabel: "Arrivée", departureLabel: "Départ", nightsLabel: "Nombre de nuits", totalLabel: "Total du séjour", emptyRoom: "Non sélectionnée", emptyValue: "—", stampText: "Demande envoyée" }
     },
     aboutPage: {
       hero: { eyebrow: "À PROPOS", title: "L'histoire de l'Apartman Nikolić", text: "Trois appartements indépendants avec piscine privée, nés de la restauration d'une bâtisse en pierre transmise de génération en génération, à deux pas du littoral istrien." },
@@ -166,6 +168,7 @@ const I18N = {
       perNight: "/ night", from: "from", send: "Send", sending: "Sending…",
       requiredField: "This field is required.", invalidEmail: "Please enter a valid email.",
       nightsSingular: "night", nightsPlural: "nights", loading: "Loading…",
+      guestsSingular: "guest", guestsPlural: "guests",
       skipToContent: "Skip to content", whatsappLabel: "Chat on WhatsApp",
       chooseLanguage: "Choose language", menu: "Menu", viewFullscreen: "View fullscreen"
     },
@@ -222,9 +225,10 @@ const I18N = {
       hero: { eyebrow: "BOOKING", title: "Book your stay", text: "Choose a room, select your dates in the calendar, then send your request. The owner confirms actual availability by email within 24 to 48 hours." },
       form: {
         roomLabel: "Room", roomPlaceholder: "Choose a room",
+        guestsLabel: "Number of guests", guestsHint: "+€30 / night per guest beyond 4",
         arrivalLabel: "Arrival", departureLabel: "Departure",
         nameLabel: "Full name", phoneLabel: "Phone", emailLabel: "Email",
-        messageLabel: "Message (optional)", messagePlaceholder: "Number of guests, estimated arrival time, special requests…",
+        messageLabel: "Message (optional)", messagePlaceholder: "Estimated arrival time, special requests…",
         submitBtn: "Send booking request", submitting: "Sending…",
         successMsg: "Your request has been sent! The owner will reply within 24 to 48 hours to confirm availability.",
         errorMsg: "Something went wrong while sending. Please try again or contact us directly on WhatsApp.",
@@ -241,7 +245,7 @@ const I18N = {
         prevMonth: "Previous month", nextMonth: "Next month"
       },
       stayStrip: { arrivalLabel: "ARRIVAL", departureLabel: "DEPARTURE", nightsLabel: "NIGHTS", placeholder: "—" },
-      summary: { title: "Booking summary", roomLabel: "Room", arrivalLabel: "Arrival", departureLabel: "Departure", nightsLabel: "Number of nights", totalLabel: "Total stay", emptyRoom: "Not selected", emptyValue: "—", stampText: "Request sent" }
+      summary: { title: "Booking summary", roomLabel: "Room", guestsLabel: "Guests", arrivalLabel: "Arrival", departureLabel: "Departure", nightsLabel: "Number of nights", totalLabel: "Total stay", emptyRoom: "Not selected", emptyValue: "—", stampText: "Request sent" }
     },
     aboutPage: {
       hero: { eyebrow: "ABOUT", title: "The story of Apartman Nikolić", text: "Three independent apartments with a private pool, born from the restoration of a family stone house passed down through generations, just steps from the Istrian coastline." },
@@ -310,6 +314,7 @@ const I18N = {
       perNight: "/ Nacht", from: "ab", send: "Senden", sending: "Wird gesendet…",
       requiredField: "Dieses Feld ist erforderlich.", invalidEmail: "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
       nightsSingular: "Nacht", nightsPlural: "Nächte", loading: "Wird geladen…",
+      guestsSingular: "Gast", guestsPlural: "Gäste",
       skipToContent: "Zum Inhalt springen", whatsappLabel: "Auf WhatsApp chatten",
       chooseLanguage: "Sprache wählen", menu: "Menü", viewFullscreen: "Vollbild anzeigen"
     },
@@ -366,9 +371,10 @@ const I18N = {
       hero: { eyebrow: "BUCHUNG", title: "Buchen Sie Ihren Aufenthalt", text: "Wählen Sie ein Zimmer, wählen Sie Ihre Daten im Kalender und senden Sie Ihre Anfrage. Der Gastgeber bestätigt die tatsächliche Verfügbarkeit per E-Mail innerhalb von 24 bis 48 Stunden." },
       form: {
         roomLabel: "Zimmer", roomPlaceholder: "Zimmer wählen",
+        guestsLabel: "Anzahl der Gäste", guestsHint: "+30 € / Nacht pro Gast über 4 hinaus",
         arrivalLabel: "Anreise", departureLabel: "Abreise",
         nameLabel: "Vollständiger Name", phoneLabel: "Telefon", emailLabel: "E-Mail",
-        messageLabel: "Nachricht (optional)", messagePlaceholder: "Anzahl der Gäste, voraussichtliche Ankunftszeit, besondere Wünsche…",
+        messageLabel: "Nachricht (optional)", messagePlaceholder: "Voraussichtliche Ankunftszeit, besondere Wünsche…",
         submitBtn: "Buchungsanfrage senden", submitting: "Wird gesendet…",
         successMsg: "Ihre Anfrage wurde gesendet! Der Gastgeber antwortet innerhalb von 24 bis 48 Stunden, um die Verfügbarkeit zu bestätigen.",
         errorMsg: "Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt über WhatsApp.",
@@ -385,7 +391,7 @@ const I18N = {
         prevMonth: "Vorheriger Monat", nextMonth: "Nächster Monat"
       },
       stayStrip: { arrivalLabel: "ANREISE", departureLabel: "ABREISE", nightsLabel: "NÄCHTE", placeholder: "—" },
-      summary: { title: "Buchungsübersicht", roomLabel: "Zimmer", arrivalLabel: "Anreise", departureLabel: "Abreise", nightsLabel: "Anzahl Nächte", totalLabel: "Gesamtpreis", emptyRoom: "Nicht ausgewählt", emptyValue: "—", stampText: "Anfrage gesendet" }
+      summary: { title: "Buchungsübersicht", roomLabel: "Zimmer", guestsLabel: "Gäste", arrivalLabel: "Anreise", departureLabel: "Abreise", nightsLabel: "Anzahl Nächte", totalLabel: "Gesamtpreis", emptyRoom: "Nicht ausgewählt", emptyValue: "—", stampText: "Anfrage gesendet" }
     },
     aboutPage: {
       hero: { eyebrow: "ÜBER UNS", title: "Die Geschichte von Apartman Nikolić", text: "Drei unabhängige Apartments mit privatem Pool, entstanden aus der Restaurierung eines seit Generationen in Familienbesitz befindlichen Steinhauses, nur wenige Schritte von der istrischen Küste entfernt." },
@@ -454,6 +460,7 @@ const I18N = {
       perNight: "/ noćenju", from: "od", send: "Pošalji", sending: "Slanje…",
       requiredField: "Ovo polje je obavezno.", invalidEmail: "Unesite valjanu e-mail adresu.",
       nightsSingular: "noć", nightsFew: "noći", nightsMany: "noćenja", loading: "Učitavanje…",
+      guestsSingular: "osoba", guestsFew: "osobe", guestsMany: "osoba",
       skipToContent: "Preskoči na sadržaj", whatsappLabel: "Chat na WhatsAppu",
       chooseLanguage: "Odaberi jezik", menu: "Izbornik", viewFullscreen: "Prikaz preko cijelog zaslona"
     },
@@ -510,9 +517,10 @@ const I18N = {
       hero: { eyebrow: "REZERVACIJA", title: "Rezervirajte boravak", text: "Odaberite sobu, odaberite datume u kalendaru, a zatim pošaljite upit. Vlasnik potvrđuje stvarnu dostupnost e-mailom unutar 24 do 48 sati." },
       form: {
         roomLabel: "Soba", roomPlaceholder: "Odaberite sobu",
+        guestsLabel: "Broj osoba", guestsHint: "+30 € / noćenju po osobi iznad 4",
         arrivalLabel: "Dolazak", departureLabel: "Odlazak",
         nameLabel: "Ime i prezime", phoneLabel: "Telefon", emailLabel: "E-mail",
-        messageLabel: "Poruka (neobavezno)", messagePlaceholder: "Broj osoba, okvirno vrijeme dolaska, posebni zahtjevi…",
+        messageLabel: "Poruka (neobavezno)", messagePlaceholder: "Okvirno vrijeme dolaska, posebni zahtjevi…",
         submitBtn: "Pošalji upit za rezervaciju", submitting: "Slanje…",
         successMsg: "Vaš upit je uspješno poslan! Vlasnik će vam odgovoriti unutar 24 do 48 sati kako bi potvrdio dostupnost.",
         errorMsg: "Došlo je do pogreške prilikom slanja. Pokušajte ponovno ili nas kontaktirajte izravno putem WhatsAppa.",
@@ -529,7 +537,7 @@ const I18N = {
         prevMonth: "Prethodni mjesec", nextMonth: "Sljedeći mjesec"
       },
       stayStrip: { arrivalLabel: "DOLAZAK", departureLabel: "ODLAZAK", nightsLabel: "NOĆENJA", placeholder: "—" },
-      summary: { title: "Sažetak rezervacije", roomLabel: "Soba", arrivalLabel: "Dolazak", departureLabel: "Odlazak", nightsLabel: "Broj noćenja", totalLabel: "Ukupna cijena", emptyRoom: "Nije odabrano", emptyValue: "—", stampText: "Upit poslan" }
+      summary: { title: "Sažetak rezervacije", roomLabel: "Soba", guestsLabel: "Osobe", arrivalLabel: "Dolazak", departureLabel: "Odlazak", nightsLabel: "Broj noćenja", totalLabel: "Ukupna cijena", emptyRoom: "Nije odabrano", emptyValue: "—", stampText: "Upit poslan" }
     },
     aboutPage: {
       hero: { eyebrow: "O NAMA", title: "Priča Apartmana Nikolić", text: "Tri samostalna apartmana s privatnim bazenom, nastala obnovom obiteljske kamene kuće koja se prenosi s koljena na koljeno, samo nekoliko koraka od istarske obale." },
@@ -639,6 +647,20 @@ function formatNights(n, lang) {
   }
   if (n === 1) return n + " " + c.nightsSingular;
   return n + " " + c.nightsPlural;
+}
+
+function formatGuests(n, lang) {
+  lang = lang || getLang();
+  const c = I18N[lang].common;
+  if (lang === "hr") {
+    const mod100 = n % 100;
+    const mod10 = n % 10;
+    if (mod10 === 1 && mod100 !== 11) return n + " " + c.guestsSingular;
+    if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return n + " " + c.guestsFew;
+    return n + " " + c.guestsMany;
+  }
+  if (n === 1) return n + " " + c.guestsSingular;
+  return n + " " + c.guestsPlural;
 }
 
 function applyI18n(lang) {

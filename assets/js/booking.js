@@ -5,6 +5,7 @@
 
 let bookingCalendar = null;
 let selectedRoomId = null;
+let selectedGuests = BOOKING_BASE_GUESTS;
 let selectedRange = { start: null, end: null };
 const formLoadedAt = Date.now();
 
@@ -30,10 +31,29 @@ function populateRoomSelect() {
     const text = t("rooms." + room.id, lang);
     const opt = document.createElement("option");
     opt.value = room.id;
-    opt.textContent = room.id + " — " + text.name + " (" + formatPrice(room.price) + " " + t("common.perNight", lang) + ")";
+    opt.textContent = room.id + " — " + text.name + " (" + t("common.from", lang) + " " + formatPrice(room.price) + " " + t("common.perNight", lang) + ")";
     select.appendChild(opt);
   });
   if (prevValue) select.value = prevValue;
+}
+
+function populateGuestsSelect() {
+  const select = document.getElementById("guestsSelect");
+  if (!select) return;
+  const lang = getLang();
+  const room = selectedRoomId ? getRoomById(selectedRoomId) : null;
+  const maxGuests = room ? room.maxGuests : Math.max.apply(null, ROOMS.map(function (r) { return r.maxGuests; }));
+  const prevValue = select.value;
+  select.innerHTML = "";
+  for (let g = 1; g <= maxGuests; g++) {
+    const opt = document.createElement("option");
+    opt.value = g;
+    opt.textContent = formatGuests(g, lang);
+    select.appendChild(opt);
+  }
+  if (prevValue && Number(prevValue) <= maxGuests) select.value = prevValue;
+  else select.value = String(Math.min(BOOKING_BASE_GUESTS, maxGuests));
+  selectedGuests = Number(select.value);
 }
 
 function renderStayStrip() {
@@ -64,6 +84,7 @@ function renderStayStrip() {
 function renderSummary() {
   const lang = getLang();
   const roomNameEl = document.getElementById("summaryRoom");
+  const guestsEl = document.getElementById("summaryGuests");
   const arrivalEl = document.getElementById("summaryArrival");
   const departureEl = document.getElementById("summaryDeparture");
   const nightsEl = document.getElementById("summaryNights");
@@ -75,13 +96,14 @@ function renderSummary() {
   const roomText = selectedRoomId ? t("rooms." + selectedRoomId, lang) : null;
 
   if (roomNameEl) roomNameEl.textContent = roomText ? (selectedRoomId + " — " + roomText.name) : t("bookingPage.summary.emptyRoom", lang);
+  if (guestsEl) guestsEl.textContent = room ? formatGuests(selectedGuests, lang) : empty;
   if (arrivalEl) arrivalEl.textContent = selectedRange.start ? formatDateDisplay(selectedRange.start) : empty;
   if (departureEl) departureEl.textContent = selectedRange.end ? formatDateDisplay(selectedRange.end) : empty;
 
   const nights = nightsBetween(selectedRange.start, selectedRange.end);
   if (nightsEl) nightsEl.textContent = nights > 0 ? formatNights(nights, lang) : empty;
 
-  const total = room && nights > 0 ? room.price * nights : 0;
+  const total = room && nights > 0 ? getRoomPricePerNight(room, selectedGuests) * nights : 0;
   if (totalEl) totalEl.textContent = total > 0 ? formatPrice(total) : empty;
 
   const ready = !!(room && nights > 0);
@@ -105,6 +127,7 @@ function initCalendar() {
 
 function initRoomSelect() {
   const select = document.getElementById("roomSelect");
+  const guestsSelect = document.getElementById("guestsSelect");
   if (!select) return;
 
   const params = new URLSearchParams(window.location.search);
@@ -115,12 +138,21 @@ function initRoomSelect() {
     select.value = preselect;
     selectedRoomId = preselect;
   }
+  populateGuestsSelect();
   initCalendar();
 
   select.addEventListener("change", function () {
     selectedRoomId = select.value || null;
+    populateGuestsSelect();
     renderSummary();
   });
+
+  if (guestsSelect) {
+    guestsSelect.addEventListener("change", function () {
+      selectedGuests = Number(guestsSelect.value);
+      renderSummary();
+    });
+  }
 }
 
 function showFormFeedback(type, message) {
@@ -156,6 +188,7 @@ function buildBookingMailtoUrl(templateParams, lang) {
   const subject = formLabels.submitBtn + " — " + templateParams.room_name;
   const body = [
     summaryLabels.roomLabel + ": " + templateParams.room_name,
+    summaryLabels.guestsLabel + ": " + templateParams.guests,
     summaryLabels.arrivalLabel + ": " + templateParams.arrival_date,
     summaryLabels.departureLabel + ": " + templateParams.departure_date,
     summaryLabels.nightsLabel + ": " + templateParams.nights,
@@ -208,10 +241,11 @@ function initBookingForm() {
 
     const room = getRoomById(selectedRoomId);
     const roomText = t("rooms." + selectedRoomId, lang);
-    const total = room.price * nights;
+    const total = getRoomPricePerNight(room, selectedGuests) * nights;
 
     const templateParams = {
       room_name: selectedRoomId + " — " + roomText.name,
+      guests: formatGuests(selectedGuests, lang),
       arrival_date: formatDateDisplay(selectedRange.start),
       departure_date: formatDateDisplay(selectedRange.end),
       nights: nights,
@@ -269,6 +303,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("i18n:changed", function () {
   populateRoomSelect();
   if (selectedRoomId) document.getElementById("roomSelect").value = selectedRoomId;
+  populateGuestsSelect();
   renderStayStrip();
   renderSummary();
 });

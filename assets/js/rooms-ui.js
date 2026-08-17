@@ -5,10 +5,15 @@
 
 function formatPrice(n) { return n + " €"; }
 
+function formatFromPrice(n, lang) {
+  return t("common.from", lang) + " " + formatPrice(n);
+}
+
 function paintRoomPrices() {
+  const lang = getLang();
   document.querySelectorAll("[data-room-price]").forEach(function (el) {
     const room = getRoomById(el.getAttribute("data-room-price"));
-    if (room) el.textContent = formatPrice(room.price);
+    if (room) el.textContent = formatFromPrice(room.price, lang);
   });
 }
 
@@ -39,7 +44,7 @@ function fillRoomModal(id) {
   if (nameEl) nameEl.textContent = text.name;
   if (taglineEl) taglineEl.textContent = text.tagline;
   if (descEl) descEl.textContent = text.long;
-  if (priceEl) priceEl.textContent = formatPrice(room.price);
+  if (priceEl) priceEl.textContent = formatFromPrice(room.price, lang);
   if (bookBtn) bookBtn.setAttribute("href", "booking.html?room=" + id);
 
   if (amenitiesEl) {

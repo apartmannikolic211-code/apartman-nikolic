@@ -102,7 +102,7 @@ recommandé dans le cahier des charges (section 6.3).
 1. Créer un compte gratuit sur EmailJS.
 2. **Email Services** → ajouter un service (ex. Gmail) → noter le **Service ID**.
 3. **Email Templates** → créer un modèle pour les demandes de réservation, avec les variables :
-   `{{room_name}}`, `{{arrival_date}}`, `{{departure_date}}`, `{{nights}}`, `{{total_price}}`,
+   `{{room_name}}`, `{{guests}}`, `{{arrival_date}}`, `{{departure_date}}`, `{{nights}}`, `{{total_price}}`,
    `{{guest_name}}`, `{{guest_phone}}`, `{{guest_email}}`, `{{guest_message}}` → noter le **Template ID**.
 4. Créer un second modèle pour le formulaire de contact avec les variables : `{{sender_name}}`,
    `{{sender_email}}`, `{{subject}}`, `{{message}}` → noter ce **Template ID**.
