@@ -72,8 +72,8 @@ const I18N = {
     },
     roomModal: { amenitiesTitle: "Équipements", bookBtn: "Réserver cette chambre" },
     galleryPage: {
-      hero: { eyebrow: "GALERIE", title: "La maison en images", text: "Extérieurs, chambres et environs — un aperçu de l'atmosphère de l'Apartman Nikolić." },
-      filters: { all: "Tout", exterior: "Extérieurs", rooms: "Chambres", surroundings: "Environs" }
+      hero: { eyebrow: "GALERIE", title: "La maison en images", text: "Extérieurs et chambres — un aperçu de l'atmosphère de l'Apartman Nikolić." },
+      filters: { all: "Tout", exterior: "Extérieurs", rooms: "Chambres" }
     },
     bookingPage: {
       hero: { eyebrow: "RÉSERVATION", title: "Réservez votre séjour", text: "Choisissez une chambre, sélectionnez vos dates dans le calendrier, puis envoyez votre demande. Le propriétaire confirme la disponibilité par email sous 24 à 48h." },
@@ -218,8 +218,8 @@ const I18N = {
     },
     roomModal: { amenitiesTitle: "Amenities", bookBtn: "Book this room" },
     galleryPage: {
-      hero: { eyebrow: "GALLERY", title: "The house in pictures", text: "Exteriors, rooms and surroundings — a glimpse of the atmosphere at Apartman Nikolić." },
-      filters: { all: "All", exterior: "Exterior", rooms: "Rooms", surroundings: "Surroundings" }
+      hero: { eyebrow: "GALLERY", title: "The house in pictures", text: "Exteriors and rooms — a glimpse of the atmosphere at Apartman Nikolić." },
+      filters: { all: "All", exterior: "Exterior", rooms: "Rooms" }
     },
     bookingPage: {
       hero: { eyebrow: "BOOKING", title: "Book your stay", text: "Choose a room, select your dates in the calendar, then send your request. The owner confirms actual availability by email within 24 to 48 hours." },
@@ -364,8 +364,8 @@ const I18N = {
     },
     roomModal: { amenitiesTitle: "Ausstattung", bookBtn: "Dieses Zimmer buchen" },
     galleryPage: {
-      hero: { eyebrow: "GALERIE", title: "Das Haus in Bildern", text: "Außenbereiche, Zimmer und Umgebung — ein Einblick in die Atmosphäre von Apartman Nikolić." },
-      filters: { all: "Alle", exterior: "Außenbereich", rooms: "Zimmer", surroundings: "Umgebung" }
+      hero: { eyebrow: "GALERIE", title: "Das Haus in Bildern", text: "Außenbereiche und Zimmer — ein Einblick in die Atmosphäre von Apartman Nikolić." },
+      filters: { all: "Alle", exterior: "Außenbereich", rooms: "Zimmer" }
     },
     bookingPage: {
       hero: { eyebrow: "BUCHUNG", title: "Buchen Sie Ihren Aufenthalt", text: "Wählen Sie ein Zimmer, wählen Sie Ihre Daten im Kalender und senden Sie Ihre Anfrage. Der Gastgeber bestätigt die tatsächliche Verfügbarkeit per E-Mail innerhalb von 24 bis 48 Stunden." },
@@ -510,8 +510,8 @@ const I18N = {
     },
     roomModal: { amenitiesTitle: "Oprema", bookBtn: "Rezerviraj ovu sobu" },
     galleryPage: {
-      hero: { eyebrow: "GALERIJA", title: "Kuća u slikama", text: "Eksterijeri, sobe i okolica — uvid u atmosferu Apartmana Nikolić." },
-      filters: { all: "Sve", exterior: "Eksterijeri", rooms: "Sobe", surroundings: "Okolica" }
+      hero: { eyebrow: "GALERIJA", title: "Kuća u slikama", text: "Eksterijeri i sobe — uvid u atmosferu Apartmana Nikolić." },
+      filters: { all: "Sve", exterior: "Eksterijeri", rooms: "Sobe" }
     },
     bookingPage: {
       hero: { eyebrow: "REZERVACIJA", title: "Rezervirajte boravak", text: "Odaberite sobu, odaberite datume u kalendaru, a zatim pošaljite upit. Vlasnik potvrđuje stvarnu dostupnost e-mailom unutar 24 do 48 sati." },
