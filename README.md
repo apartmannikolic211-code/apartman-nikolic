@@ -5,8 +5,8 @@ données), conforme au cahier des charges « Maison Kamena » v1.0, avec deux é
 client :
 
 1. Le nom du projet a été remplacé par **Apartman Nikolić**.
-2. Le site est disponible en **4 langues** : Hrvatski (Croate, langue par défaut), English, Deutsch,
-   Français — sélecteur de langue dans l'en-tête, choix mémorisé dans le navigateur (`localStorage`).
+2. Le site est disponible en **3 langues** : Hrvatski (Croate, langue par défaut), English, Deutsch —
+   sélecteur de langue dans l'en-tête, choix mémorisé dans le navigateur (`localStorage`).
 
 ## Démarrage
 
@@ -36,7 +36,7 @@ contact.html    Contact (carte, WhatsApp, formulaire)
 
 assets/css/style.css     Design system complet (couleurs, typographies, composants)
 assets/js/config.js      *** Toutes les valeurs à personnaliser (voir ci-dessous) ***
-assets/js/i18n.js        Dictionnaire de traduction HR / EN / DE / FR + moteur de traduction
+assets/js/i18n.js        Dictionnaire de traduction HR / EN / DE + moteur de traduction
 assets/js/rooms-data.js  Données des 3 chambres (prix, photos)
 assets/js/main.js        Navigation, sélecteur de langue, bouton WhatsApp
 assets/js/rooms-ui.js    Fenêtre modale « fiche chambre », affichage des prix
@@ -65,7 +65,7 @@ Tout se passe dans **`assets/js/config.js`** :
 Dans **`assets/js/rooms-data.js`** : prix par nuit (`price`) et photos (`heroImage`, `images`).
 
 Les noms, descriptions et équipements des chambres sont dans `assets/js/i18n.js`, sous
-`I18N.<langue>.rooms.I / II / III`, à modifier dans les 4 langues.
+`I18N.<langue>.rooms.I / II / III`, à modifier dans les 3 langues.
 
 Le calendrier de réservation ne bloque volontairement aucune date : toutes les dates futures sont
 sélectionnables, y compris celles déjà réservées ailleurs (le site n'a pas de base de données, voir
@@ -135,8 +135,8 @@ tard.
 ## Traductions
 
 Toutes les chaînes du site sont centralisées dans `assets/js/i18n.js` (objet `I18N`), avec une entrée par
-langue : `fr`, `en`, `de`, `hr`. La structure est identique dans les 4 langues (vérifié
-automatiquement) — pour ajouter ou modifier un texte, répéter le changement dans les 4 blocs.
+langue : `hr`, `en`, `de`. La structure est identique dans les 3 langues (vérifié
+automatiquement) — pour ajouter ou modifier un texte, répéter le changement dans les 3 blocs.
 
 Le HTML ne contient jamais de texte traduisible en dur : chaque élément porte un attribut
 `data-i18n="chemin.de.la.cle"` (ou `data-i18n-placeholder`, `data-i18n-aria-label`) qui est rempli au

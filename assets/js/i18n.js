@@ -4,164 +4,17 @@
    keys, this file supplies the strings, applyI18n() paints them.
    ========================================================= */
 
-const SUPPORTED_LANGS = ["hr", "en", "de", "fr"];
+const SUPPORTED_LANGS = ["hr", "en", "de"];
 const DEFAULT_LANG = "hr";
 const LANG_STORAGE_KEY = "apk_lang";
 
 const LANG_META = {
   hr: { label: "Hrvatski" },
   en: { label: "English" },
-  de: { label: "Deutsch" },
-  fr: { label: "Français" }
+  de: { label: "Deutsch" }
 };
 
 const I18N = {
-  fr: {
-    common: {
-      bookNow: "Réserver", viewDetails: "Voir les détails & photos", close: "Fermer",
-      perNight: "/ nuit", from: "à partir de", send: "Envoyer", sending: "Envoi en cours…",
-      requiredField: "Ce champ est obligatoire.", invalidEmail: "Merci d'indiquer un email valide.",
-      nightsSingular: "nuit", nightsPlural: "nuits", loading: "Chargement…",
-      guestsSingular: "personne", guestsPlural: "personnes",
-      skipToContent: "Aller au contenu", whatsappLabel: "Discuter sur WhatsApp",
-      chooseLanguage: "Choisir la langue", menu: "Menu", viewFullscreen: "Voir en plein écran"
-    },
-    nav: { home: "Accueil", rooms: "Nos chambres", gallery: "Galerie", booking: "Réservation", about: "À propos", reviews: "Avis clients", faq: "FAQ", contact: "Contact" },
-    meta: {
-      home: { title: "Apartman Nikolić — Appartements avec piscine privée à Funtana", desc: "Trois appartements indépendants avec piscine privée, dans une maison en pierre face à l'Adriatique. Calculez le prix et réservez votre séjour en ligne." },
-      rooms: { title: "Nos chambres — Apartman Nikolić", desc: "Découvrez les trois appartements indépendants de l'Apartman Nikolić, avec piscine privée : photos, équipements et tarifs." },
-      gallery: { title: "Galerie — Apartman Nikolić", desc: "Photos de la maison, des chambres et des environs de l'Apartman Nikolić." },
-      booking: { title: "Réservation — Apartman Nikolić", desc: "Choisissez votre chambre et vos dates, calculez le prix et envoyez votre demande de réservation." },
-      about: { title: "À propos — Apartman Nikolić", desc: "L'histoire de l'Apartman Nikolić, une maison en pierre restaurée avec soin sur la côte adriatique." },
-      reviews: { title: "Avis clients — Apartman Nikolić", desc: "Découvrez les témoignages de nos hôtes après leur séjour à l'Apartman Nikolić." },
-      faq: { title: "FAQ — Apartman Nikolić", desc: "Check-in, annulation, paiement, animaux : toutes les réponses à vos questions." },
-      contact: { title: "Contact — Apartman Nikolić", desc: "Contactez l'Apartman Nikolić par téléphone, email, WhatsApp ou via le formulaire en ligne." }
-    },
-    footer: {
-      tagline: "Maison d'hôtes de trois chambres au cœur de la côte adriatique.",
-      pagesTitle: "Navigation", contactTitle: "Contact", followTitle: "Suivez-nous",
-      rights: "Tous droits réservés.",
-      privacyNote: "Les données transmises via ce site sont envoyées uniquement par email et ne sont stockées sur aucun serveur ni base de données."
-    },
-    home: {
-      hero: { eyebrow: "MAISON D'HÔTES · CÔTE ADRIATIQUE", title: "Apartman Nikolić", subtitle: "Trois appartements indépendants avec piscine privée, dans une bâtisse en pierre face à l'Adriatique. Réservez votre séjour en quelques clics.", ctaBook: "Réserver mon séjour", ctaRooms: "Découvrir les chambres" },
-      intro: {
-        eyebrow: "BIENVENUE", title: "Un refuge en pierre, entre mer et oliviers",
-        text: "À deux pas du littoral, l'Apartman Nikolić propose trois appartements indépendants avec piscine privée, pensés pour les voyageurs en quête de calme et d'authenticité. Son emplacement stratégique permet de profiter pleinement du littoral istriote : matériaux naturels, lumière du matin et commodités accessibles à pied composent un séjour aussi ressourçant que pratique.",
-        highlights: ["Plages à 1 km à pied", "Commerces à 2 min à pied", "Dinopark Funtana à 1 km", "Aquapark Aquacolors à 3 km", "Marinas de Funtana & Vrsar à proximité", "Canal de Lème à 7 km"]
-      },
-      roomsSection: { eyebrow: "NOS CHAMBRES", title: "Trois appartements, trois ambiances", text: "Chaque appartement porte le nom d'un élément du paysage adriatique et propose deux chambres, un salon et une cuisine équipée, avec accès à la piscine privée et aux équipements communs de la résidence.", cta: "Voir toutes les chambres" },
-      whySection: {
-        eyebrow: "POURQUOI NOUS CHOISIR", title: "Un accueil à taille humaine",
-        items: [
-          { title: "Réservation simple", text: "Sélectionnez vos dates, obtenez le prix instantanément et envoyez votre demande en un clic." },
-          { title: "À deux pas de la mer", text: "La maison se trouve à quelques minutes à pied du littoral et du centre historique." },
-          { title: "Piscine privée", text: "Chaque appartement donne accès à la piscine privée et à l'espace barbecue de la résidence." },
-          { title: "Réponse rapide", text: "Une question ? Contactez-nous directement par WhatsApp, nous répondons sous 24h." }
-        ]
-      },
-      testimonialsSection: { eyebrow: "AVIS CLIENTS", title: "Ce que disent nos hôtes" },
-      ctaBanner: { title: "Prêt à réserver votre séjour ?", text: "Choisissez votre chambre, vos dates, et recevez votre récapitulatif en un instant.", button: "Commencer ma réservation" },
-      locationSection: { eyebrow: "OÙ NOUS TROUVER", title: "Une adresse au cœur de Funtana", text: "À Funtana, à deux pas du littoral istrien, l'Apartman Nikolić est facile à trouver. Cliquez sur la carte pour obtenir l'itinéraire jusqu'à la maison.", cta: "Itinéraire sur Google Maps" }
-    },
-    roomsPage: { hero: { eyebrow: "NOS CHAMBRES", title: "Trois appartements indépendants", text: "Un ensemble parfait pour séjourner ensemble tout en gardant son indépendance : chaque appartement dispose de deux chambres, d'un salon, d'une cuisine équipée et d'une salle de bain, avec sa propre décoration et sa vue. Cliquez sur un appartement pour découvrir la galerie complète et les équipements." } },
-    rooms: {
-      I: { name: "Appartement 1", tagline: "Vue mer", short: "Un appartement indépendant avec vue sur l'Adriatique : deux chambres, un salon et une cuisine équipée, pensé pour les levers de soleil sur la mer.", long: "Installé à l'étage, l'Appartement 1 ouvre sur un balcon privé face à la mer. Ses deux chambres, son salon et sa cuisine entièrement équipée permettent de séjourner ensemble tout en gardant son indépendance. Le mobilier en bois clair, les tons bleu adriatique et les textiles en lin composent une ambiance apaisante, complétée par l'accès à la piscine privée et à l'espace barbecue de la résidence.", amenities: ["2 chambres", "Salon", "Cuisine équipée", "Salle de bain", "Vue mer", "Balcon privé", "Climatisation", "Wifi gratuit", "Piscine privée", "Espace barbecue", "Parking privé", "Console PS5"] },
-      II: { name: "Appartement 2", tagline: "Jardin d'oliviers", short: "Un appartement indépendant au rez-de-chaussée, tourné vers le jardin d'oliviers centenaires : deux chambres, un salon et une cuisine équipée.", long: "L'Appartement 2 donne directement sur le jardin planté d'oliviers centenaires. Ses deux chambres et son salon au plafond à poutres apparentes, dans des tons olive et laiton, lui confèrent un charme rustique et chaleureux, tandis que la cuisine entièrement équipée permet de recevoir en toute liberté. Piscine privée, espace barbecue et parking de la résidence inclus.", amenities: ["2 chambres", "Salon", "Cuisine équipée", "Salle de bain", "Vue jardin d'oliviers", "Coin bureau", "Climatisation", "Wifi gratuit", "Piscine privée", "Espace barbecue", "Parking privé", "Console PS5"] },
-      III: { name: "Appartement 3", tagline: "Cour en pierre", short: "Un appartement indépendant au caractère minéral, ouvert sur la cour intérieure en pierre : deux chambres, un salon et une cuisine équipée.", long: "Nichée au cœur de la propriété, l'Appartement 3 tire son nom des murs en pierre apparente qui l'entourent. Ses deux chambres et son salon s'ouvrent sur une cour intérieure privée, dans des tons terracotta raffinés, avec une cuisine entièrement équipée et une douche à l'italienne. Un cocon discret complété par l'accès à la piscine privée et à l'espace barbecue.", amenities: ["2 chambres", "Salon", "Cuisine équipée", "Salle de bain", "Vue cour intérieure", "Douche à l'italienne", "Climatisation", "Wifi gratuit", "Piscine privée", "Espace barbecue", "Parking privé", "Console PS5"] }
-    },
-    roomModal: { amenitiesTitle: "Équipements", bookBtn: "Réserver cette chambre" },
-    galleryPage: {
-      hero: { eyebrow: "GALERIE", title: "La maison en images", text: "Extérieurs et chambres — un aperçu de l'atmosphère de l'Apartman Nikolić." },
-      filters: { all: "Tout", exterior: "Extérieurs", rooms: "Chambres" }
-    },
-    bookingPage: {
-      hero: { eyebrow: "RÉSERVATION", title: "Réservez votre séjour", text: "Choisissez une chambre, sélectionnez vos dates dans le calendrier, puis envoyez votre demande. Le propriétaire confirme la disponibilité par email sous 24 à 48h." },
-      form: {
-        roomLabel: "Chambre", roomPlaceholder: "Choisissez une chambre",
-        guestsLabel: "Nombre de personnes", guestsHint: "+30 € / nuit par personne au-delà de 4",
-        arrivalLabel: "Arrivée", departureLabel: "Départ",
-        nameLabel: "Nom complet", phoneLabel: "Téléphone", emailLabel: "Email",
-        messageLabel: "Message (optionnel)", messagePlaceholder: "Heure d'arrivée estimée, demandes particulières…",
-        submitBtn: "Envoyer la demande de réservation", submitting: "Envoi en cours…",
-        successMsg: "Votre demande a bien été envoyée ! Le propriétaire vous répondra sous 24 à 48h pour confirmer la disponibilité.",
-        errorMsg: "Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous contacter directement par WhatsApp.",
-        mailFallbackMsg: "Votre messagerie va s'ouvrir avec les détails de votre demande pré-remplis. Merci de vérifier puis d'envoyer l'email pour finaliser votre réservation.",
-        privacyNote: "Les informations transmises via ce formulaire sont utilisées uniquement pour traiter votre demande de réservation et ne sont stockées sur aucun serveur.",
-        selectDatesFirst: "Veuillez sélectionner une chambre et des dates avant d'envoyer votre demande.",
-        captchaNote: "Ce formulaire est protégé contre les robots (anti-spam)."
-      },
-      calendar: {
-        months: ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
-        weekdays: ["lun", "mar", "mer", "jeu", "ven", "sam", "dim"],
-        legendAvailable: "Disponible", legendSelected: "Sélectionné",
-        selectArrivalPrompt: "Sélectionnez la date d'arrivée", selectDeparturePrompt: "Sélectionnez la date de départ",
-        prevMonth: "Mois précédent", nextMonth: "Mois suivant"
-      },
-      stayStrip: { arrivalLabel: "ARRIVÉE", departureLabel: "DÉPART", nightsLabel: "NUITS", placeholder: "—" },
-      summary: { title: "Récapitulatif de réservation", roomLabel: "Chambre", guestsLabel: "Personnes", arrivalLabel: "Arrivée", departureLabel: "Départ", nightsLabel: "Nombre de nuits", totalLabel: "Total du séjour", emptyRoom: "Non sélectionnée", emptyValue: "—", stampText: "Demande envoyée" }
-    },
-    aboutPage: {
-      hero: { eyebrow: "À PROPOS", title: "L'histoire de l'Apartman Nikolić", text: "Trois appartements indépendants avec piscine privée, nés de la restauration d'une bâtisse en pierre transmise de génération en génération, à deux pas du littoral istrien." },
-      story: ["L'Apartman Nikolić est né de la restauration d'une bâtisse en pierre familiale, à Funtana, à deux pas du littoral istrien. Plutôt que d'en faire une simple location saisonnière, la famille a choisi d'y créer trois appartements indépendants et identiques — deux chambres, un salon et une cuisine équipée chacun — pensés pour accueillir chaleureusement chaque groupe tout en préservant l'intimité de chacun.", "Ici, la piscine privée et l'espace barbecue deviennent le lieu des retrouvailles, tandis que chaque appartement reste un cocon indépendant pour se reposer. Les matériaux d'origine — pierre, bois, chaux — ont été mis en valeur pour apporter le confort d'un séjour moderne. Et parce que l'accueil reste avant tout une affaire de famille, c'est elle-même qui répond à vos messages et prépare votre arrivée, du premier échange jusqu'à votre départ."],
-      values: [
-        { title: "Authenticité", text: "Une maison en pierre restaurée dans le respect de son architecture d'origine." },
-        { title: "Accueil personnalisé", text: "Un contact direct avec la famille, du premier message à votre départ." },
-        { title: "Ancrage local", text: "Produits du jardin, adresses de confiance et conseils pour explorer les environs." }
-      ],
-      amenitiesSection: {
-        eyebrow: "ÉQUIPEMENTS INCLUS", title: "Des équipements pensés pour votre confort",
-        items: [
-          { title: "Piscine privée", text: "Rafraîchissez-vous et profitez du soleil en toute tranquillité." },
-          { title: "Espace barbecue", text: "Un coin dédié aux grillades et aux repas partagés en plein air." },
-          { title: "Parking privé", text: "Stationnement sécurisé et facile directement dans la propriété." },
-          { title: "Wi-Fi haut débit", text: "Connexion Internet incluse dans l'ensemble de la propriété." },
-          { title: "Console PS5", text: "Pour le plaisir des petits et grands amateurs de jeux vidéo." }
-        ]
-      },
-      highlightsSection: {
-        eyebrow: "AVANTAGES", title: "Les Plus de cet Hébergement",
-        items: [
-          { title: "Indépendance et convivialité", text: "Profitez de moments partagés autour de la piscine ou du barbecue, tout en conservant votre espace privé dans votre propre appartement." },
-          { title: "Confort tout équipement", text: "Idéal aussi bien pour des vacances relaxantes que pour un séjour dynamique, avec des équipements modernes pour tous les âges." }
-        ]
-      },
-      hostTitle: "À votre service", hostText: "N'hésitez pas à nous contacter avant, pendant ou après votre séjour : nous sommes joignables par WhatsApp, téléphone ou email."
-    },
-    reviewsPage: {
-      hero: { eyebrow: "AVIS CLIENTS", title: "Ce que disent nos hôtes", text: "Une sélection d'avis laissés par nos voyageurs après leur séjour." },
-      ratingSummary: { score: "4.9", basedOn: "Basé sur 128 avis en ligne" },
-      list: [
-        { author: "Sophie D.", origin: "France", stars: 5, date: "Juillet 2026", quote: "Un accueil chaleureux et un appartement impeccable avec vue sur la mer. La piscine privée restera un des meilleurs souvenirs de nos vacances." },
-        { author: "Thomas M.", origin: "Allemagne", stars: 5, date: "Juin 2026", quote: "Emplacement calme, magnifique cour intérieure et hôtes très réactifs. Nous reviendrons, c'est certain !" },
-        { author: "Ivana K.", origin: "Croatie", stars: 5, date: "Mai 2026", quote: "Une magnifique maison en pierre, l'Appartement 3 est un vrai bijou. Tout était propre, calme et très authentique." },
-        { author: "James H.", origin: "Serbie", stars: 4, date: "Août 2026", quote: "De belles chambres et un excellent emplacement près de la vieille ville. La réservation par email était un peu inhabituelle au début, mais le propriétaire a répondu en quelques heures." },
-        { author: "Laura B.", origin: "France", stars: 5, date: "Juillet 2026", quote: "Le jardin d'oliviers devant l'Appartement 2 est tout simplement magnifique. Parfait pour se détendre après une journée à la plage." },
-        { author: "Noah V.", origin: "Allemagne", stars: 5, date: "Septembre 2026", quote: "Tout était exactement conforme à la description, de l'architecture en pierre à la vue sur mer. Fortement recommandé pour un séjour paisible." }
-      ]
-    },
-    faqPage: {
-      hero: { eyebrow: "FAQ", title: "Questions fréquentes", text: "Tout ce qu'il faut savoir avant de réserver votre séjour." },
-      list: [
-        { q: "À quelle heure sont le check-in et le check-out ?", a: "L'arrivée (check-in) se fait entre 15h00 et 20h00, et le départ (check-out) avant 11h00. Pour toute arrivée en dehors de ces horaires, merci de nous prévenir à l'avance via WhatsApp." },
-        { q: "Quelle est la politique d'annulation ?", a: "Une annulation gratuite est possible jusqu'à 7 jours avant la date d'arrivée. Passé ce délai, la première nuit reste due. Ces conditions vous seront confirmées par email lors de la validation de votre réservation." },
-        { q: "Quels moyens de paiement acceptez-vous ?", a: "Le paiement s'effectue sur place, en espèces ou par virement bancaire. Aucun paiement en ligne n'est demandé au moment de la réservation." },
-        { q: "Les animaux de compagnie sont-ils acceptés ?", a: "Les animaux de compagnie sont acceptés sur demande préalable. Merci de nous en informer au moment de votre réservation." },
-        { q: "Le petit-déjeuner est-il inclus ?", a: "Non, chaque appartement dispose d'une cuisine entièrement équipée pour préparer vos repas en toute liberté. Une épicerie et plusieurs boulangeries se trouvent à proximité pour vos courses du matin." },
-        { q: "Y a-t-il un parking disponible ?", a: "Oui, chaque appartement dispose de sa propre place de parking privé sur la résidence." },
-        { q: "Comment ma réservation est-elle confirmée ?", a: "Après l'envoi de votre demande, le propriétaire vérifie la disponibilité réelle des chambres et vous répond par email sous 24 à 48h pour confirmer votre séjour." },
-        { q: "La maison convient-elle aux enfants ?", a: "Oui, les familles sont les bienvenues. N'hésitez pas à nous indiquer l'âge de vos enfants dans le message de réservation afin que nous puissions vous conseiller au mieux." }
-      ]
-    },
-    contactPage: {
-      hero: { eyebrow: "CONTACT", title: "Parlons de votre séjour", text: "Une question, une demande particulière ? Écrivez-nous, nous répondons sous 24h." },
-      info: { addressTitle: "Adresse", phoneTitle: "Téléphone", emailTitle: "Email", hoursTitle: "Horaires de réponse", hoursValue: "Tous les jours, 8h–20h", addressNote: "" },
-      form: { subjectLabel: "Sujet", subjectPlaceholder: "Demande d'information, réservation groupe…", nameLabel: "Nom complet", emailLabel: "Email", messageLabel: "Message", submitBtn: "Envoyer le message", submitting: "Envoi en cours…", successMsg: "Votre message a bien été envoyé, merci ! Nous vous répondrons sous 24h.", errorMsg: "Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous contacter par WhatsApp." },
-      mapNote: "Cliquez sur la carte pour ouvrir l'itinéraire dans Google Maps.",
-      mapLinkLabel: "Voir sur Google Maps"
-    }
-  },
-
   en: {
     common: {
       bookNow: "Book now", viewDetails: "View details & photos", close: "Close",
