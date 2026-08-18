@@ -10,7 +10,7 @@ const ROOMS = [
   {
     id: "I",
     slug: "more",
-    price: 150,
+    price: 180,
     maxGuests: 6,
     heroImage: "assets/img/rooms/more/more-9.jpg",
     images: [
@@ -28,7 +28,7 @@ const ROOMS = [
   {
     id: "II",
     slug: "maslina",
-    price: 150,
+    price: 180,
     maxGuests: 6,
     heroImage: "assets/img/rooms/maslina/maslina-5.png",
     images: [
@@ -45,7 +45,7 @@ const ROOMS = [
   {
     id: "III",
     slug: "kamen",
-    price: 150,
+    price: 180,
     maxGuests: 6,
     heroImage: "assets/img/rooms/kamen/kamen-1.png",
     images: [
