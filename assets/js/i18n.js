@@ -45,7 +45,7 @@ const I18N = {
     home: {
       hero: { eyebrow: "GUESTHOUSE · ADRIATIC COAST", title: "Apartman Nikolić", subtitle: "Three independent apartments with private pool, in a stone house facing the Adriatic. Book your stay in a few clicks.", ctaBook: "Book my stay", ctaRooms: "Discover the rooms" },
       intro: {
-        eyebrow: "WELCOME", title: "A stone hideaway between the sea and the olive trees",
+        eyebrow: "WELCOME", title: "A house in the heart of Funtana",
         text: "Just steps from the coastline, Apartman Nikolić offers three independent apartments with a private pool, designed for travelers seeking calm and authenticity. Its prime location lets you make the most of the Istrian coastline: natural materials, morning light and amenities within walking distance make for a stay that's both restful and practical.",
         highlights: ["Beaches 1 km on foot", "Shops 2 min on foot", "Dinopark Funtana 1 km away", "Aquacolors Aquapark 3 km away", "Funtana & Vrsar marinas nearby", "Lim Channel 7 km away"]
       },
@@ -191,7 +191,7 @@ const I18N = {
     home: {
       hero: { eyebrow: "GÄSTEHAUS · ADRIAKÜSTE", title: "Apartman Nikolić", subtitle: "Drei unabhängige Apartments mit privatem Pool, in einem Steinhaus mit Blick auf die Adria. Buchen Sie Ihren Aufenthalt in wenigen Klicks.", ctaBook: "Aufenthalt buchen", ctaRooms: "Zimmer entdecken" },
       intro: {
-        eyebrow: "WILLKOMMEN", title: "Ein steinernes Refugium zwischen Meer und Olivenbäumen",
+        eyebrow: "WILLKOMMEN", title: "Ein Haus im Herzen von Funtana",
         text: "Nur wenige Schritte von der Küste entfernt bietet Apartman Nikolić drei unabhängige Apartments mit privatem Pool für Reisende, die Ruhe und Authentizität suchen. Die ideale Lage lässt Sie die istrische Küste in vollen Zügen genießen: natürliche Materialien, Morgenlicht und fußläufig erreichbare Geschäfte sorgen für einen erholsamen und zugleich praktischen Aufenthalt.",
         highlights: ["Strände 1 km zu Fuß", "Geschäfte 2 Gehminuten", "Dinopark Funtana 1 km entfernt", "Aquapark Aquacolors 3 km entfernt", "Marinas Funtana & Vrsar in der Nähe", "Limkanal 7 km entfernt"]
       },
@@ -337,7 +337,7 @@ const I18N = {
     home: {
       hero: { eyebrow: "KUĆA ZA GOSTE · JADRANSKA OBALA", title: "Apartman Nikolić", subtitle: "Tri samostalna apartmana s privatnim bazenom, u kamenoj kući okrenutoj Jadranu. Rezervirajte boravak u nekoliko klikova.", ctaBook: "Rezerviraj boravak", ctaRooms: "Otkrij sobe" },
       intro: {
-        eyebrow: "DOBRODOŠLI", title: "Kameno utočište između mora i maslina",
+        eyebrow: "DOBRODOŠLI", title: "Kuća u srcu Funtane",
         text: "Samo nekoliko koraka od obale, Apartman Nikolić nudi tri samostalna apartmana s privatnim bazenom, osmišljena za putnike koji traže mir i autentičnost. Izvrstan položaj omogućuje potpuni užitak u istarskoj obali: prirodni materijali, jutarnje svjetlo i trgovine nadohvat ruke čine boravak jednako opuštajućim koliko i praktičnim.",
         highlights: ["Plaže na 1 km hoda", "Trgovine na 2 minute hoda", "Dinopark Funtana na 1 km", "Aquapark Aquacolors na 3 km", "Marine Funtana i Vrsar u blizini", "Limski kanal na 7 km"]
       },
